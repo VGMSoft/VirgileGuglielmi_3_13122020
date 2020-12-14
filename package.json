@@ -1,0 +1,24 @@
+{
+  "name": "virgileguglielmi_3_13122020",
+  "version": "1.0.0",
+  "description": "SASS / Animations",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VGMSoft/VirgileGuglielmi_3_13122020.git"
+  },
+  "keywords": [
+    "#sass",
+    "#css",
+    "#animations"
+  ],
+  "author": "Virgile Guglielmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VGMSoft/VirgileGuglielmi_3_13122020/issues"
+  },
+  "homepage": "https://vgmsoft.github.io/VirgileGuglielmi_3_13122020/"
+}
