@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Roboto", "sans-serif";
   margin: 0;
-  box-sizing: border-box;
 }
 
 a {
@@ -15,28 +20,81 @@ ul {
   padding-left: 0;
 }
 
-.card {
+.i__text {
+  margin-left: 1em;
+}
+.i__text--s {
+  margin-left: 0.5em;
+}
+
+.number {
+  color: #e9e9e9;
+  background-color: #9356dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
+  position: relative;
+  top: 3em;
+}
+
+.new {
   display: block;
-  width: 100%;
+  background-color: #99e2d0;
+  color: #278870;
+  margin: 0;
+  padding: 0.5em;
+  width: 4em;
+  height: 1em;
+  position: relative;
+  top: 1em;
+  left: 15.5em;
+}
+
+.filter {
+  fill: #fff;
+}
+
+.card {
+  width: auto;
+  height: 14em;
   margin-bottom: 1em;
-  border-radius: 1em;
-  box-shadow: 1em 1em 1em #ddd;
-  background-color: #fff;
   overflow: hidden;
+  box-shadow: 1em 1em 1em #ddd;
+  border-radius: 1em;
+}
+.card__header {
+  object-fit: cover;
+  height: 65%;
+}
+.card__header__mask {
+  color: #278870;
+  background-color: #99e2d0;
+  padding: 0.5em;
+  height: 2em;
+  position: absolute;
+  right: 1.75em;
+}
+.card__body {
+  background-color: #fff;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.card__body p {
+  margin: 0.5em;
+}
+.card__body p:nth-of-type(1) {
+  font-weight: bold;
 }
 
 figure {
   margin: 0;
-}
-figure > img {
-  object-fit: cover;
-  width: 100%;
-}
-figure figcaption {
-  padding: 0.75em;
-}
-figure figcaption :nth-child(1) {
-  font-weight: 200;
+  display: flex;
+  flex-direction: column;
 }
 
 .button {
@@ -48,16 +106,74 @@ figure figcaption :nth-child(1) {
   height: 3em;
   padding: 0 1.5em;
   border-radius: 1.5em;
+  font-size: 1em;
+  font-weight: 200;
+  margin-bottom: 3em;
 }
-.button__stage {
-  border: solid black 1px;
-  border-radius: 1em;
+
+.selector {
   display: flex;
   flex-direction: row;
   align-content: baseline;
+  width: 97%;
+  margin-left: 3%;
+  padding: 1.5em;
+  background-color: #f1f1f1;
+  box-shadow: 0.25em 0.25em 1em #c3c3c3;
+  border-radius: 1.25em;
 }
-.button__stage:hover {
+.selector .fas {
+  color: #767676;
+  font-size: 1.25em;
+  margin-left: 1em;
+}
+.selector:hover {
   background-color: rgba(147, 86, 220, 0.2);
+}
+.selector:hover .fas {
+  color: #9356dc;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1em 0.5em #000;
+}
+header #brand {
+  padding: 1.25em 0 0.5em 0;
+  box-shadow: 0 5px 5px #000;
+}
+header #brand .logo {
+  width: 10em;
+  height: auto;
+}
+header #brand .fa-arrow-left {
+  font-size: 1.25em;
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  color: #434343;
+}
+
+.footer {
+  background-color: #373737;
+  color: #fff;
+  padding: 1em;
+}
+.footer__logo {
+  width: 7em;
+  height: auto;
+}
+.footer ul {
+  margin-top: 0.5em;
+}
+.footer ul li {
+  line-height: 1.5em;
+}
+.footer ul .fas::before {
+  font-size: 0.75em;
+  width: 1em;
 }
 
 header,
@@ -66,33 +182,65 @@ header,
   text-align: center;
 }
 
+#localisation,
+#fonctionnement,
+#reservation,
+#restaurants {
+  padding: 1em;
+}
+
+#brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#localisation {
+  background-color: #e1e1e1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 #reservation {
   background-color: #e9e9e9;
-  padding: 1em;
   margin-bottom: 1em;
 }
-#reservation :nth-child(1) {
-  font-weight: 200;
+#reservation .reserv__title {
+  font-weight: 100;
+  width: 10em;
+  margin: auto;
+}
+#reservation .reserv__subtitle {
+  font-weight: 300;
+  font-size: 1.1em;
+  margin-bottom: 2em;
 }
 
 #fonctionnement {
-  padding: 1em;
+  background-color: #fff;
   margin-bottom: 1em;
+}
+#fonctionnement h2 {
+  margin-bottom: 0.5em;
 }
 
 #restaurants {
   background-color: #e9e9e9;
-  padding: 1em;
 }
 
-footer {
-  background-color: #383838;
-  color: #fff;
-  padding: 1em;
+.restaurant__pic {
+  object-fit: cover;
+  width: 100%;
 }
-footer .white_logo {
-  fill: #fff;
-  width: 6em;
+
+.container1 {
+  font-weight: 100;
+}
+
+.container2 {
+  font-weight: 300;
+  font-size: 1.1em;
 }
 
 /*# sourceMappingURL=styles.css.map */

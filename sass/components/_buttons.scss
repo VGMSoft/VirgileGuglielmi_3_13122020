@@ -1,0 +1,35 @@
+.button {
+  border: none;
+  &__reserv {
+    background: linear-gradient(0deg, $color-primary, $color-secondary);
+    color: $background-color;
+    height: 3em;
+    padding: 0 1.5em;
+    border-radius: 1.5em;
+    font-size: 1em;
+    font-weight: 200;
+    margin-bottom: 3em;
+  }
+}
+.selector {
+  display: flex;
+  flex-direction: row;
+  align-content: baseline;
+  width: 97%;
+  margin-left: 3%;
+  padding: 1.5em;
+  background-color: lighten($background-color, 3%);
+  box-shadow: 0.25em 0.25em 1em darken($background-color, 15%);
+  border-radius: 1.25em;
+  .fas {
+    color: darken($background-color, 45%);
+    font-size: 1.25em;
+    margin-left: 1em;
+  }
+  &:hover {
+    background-color: rgba($color-primary, 0.2);
+    .fas {
+      color: $color-primary;
+    }
+  }
+}

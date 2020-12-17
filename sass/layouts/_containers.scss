@@ -1,0 +1,49 @@
+//containers
+header,
+#localisation,
+#reservation {
+  text-align: center;
+}
+
+#localisation,
+#fonctionnement,
+#reservation,
+#restaurants {
+  padding: 1em;
+}
+
+#brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#localisation {
+  background-color: darken($background-color, 3%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#reservation {
+  background-color: $background-color;
+  margin-bottom: 1em;
+  .reserv__title {
+    font-weight: 100;
+    width: 10em;
+    margin: auto;
+  }
+  .reserv__subtitle {
+    font-weight: 300;
+    font-size: 1.1em;
+    margin-bottom: 2em;
+  }
+}
+#fonctionnement {
+  background-color: #fff;
+  margin-bottom: 1em;
+  h2 {
+    margin-bottom: 0.5em;
+  }
+}
+#restaurants {
+  background-color: $background-color;
+}

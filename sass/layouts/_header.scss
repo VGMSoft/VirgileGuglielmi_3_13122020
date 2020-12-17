@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1em 0.5em #000;
+  #brand {
+    padding: 1.25em 0 0.5em 0;
+    box-shadow: 0 5px 5px #000;
+    .logo {
+      width: 10em;
+      height: auto;
+    }
+    .fa-arrow-left {
+      font-size: 1.25em;
+      position: absolute;
+      left: 1em;
+      top: 1em;
+      color: darken($background-color, 65%);
+    }
+  }
+}

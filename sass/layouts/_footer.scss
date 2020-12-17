@@ -1,0 +1,19 @@
+.footer {
+  background-color: darken($background-color, 70%);
+  color: #fff;
+  padding: 1em;
+  &__logo {
+    width: 7em;
+    height: auto;
+  }
+  ul {
+    margin-top: 0.5em;
+    li {
+      line-height: 1.5em;
+    }
+    .fas::before {
+      font-size: 0.75em;
+      width: 1em;
+    }
+  }
+}

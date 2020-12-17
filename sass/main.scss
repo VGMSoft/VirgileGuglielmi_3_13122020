@@ -1,97 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500&display=swap");
-//general__settings
-body {
-  font-family: "Roboto", "sans-serif";
-  margin: 0;
-  box-sizing: border-box;
+@import "./utils/variables";
+@import "./base/base";
+@import "./components/components";
+@import "./components/cards";
+@import "./components/buttons";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/containers";
+@import "./layouts/pics";
+.container1 {
+  font-weight: 100;
 }
-a {
-  text-decoration: inherit;
-  color: inherit;
-}
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-//variables
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$background-color: #e9e9e9;
-
-//components
-.card {
-  display: block;
-  width: 100%;
-  margin-bottom: 1em;
-  border-radius: 1em;
-  box-shadow: 1em 1em 1em #ddd;
-  background-color: #fff;
-  overflow: hidden;
-}
-
-figure {
-  margin: 0;
-  > img {
-    object-fit: cover;
-    width: 100%;
-  }
-  figcaption {
-    padding: 0.75em;
-    :nth-child(1) {
-      font-weight: 200;
-    }
-  }
-}
-.button {
-  border: none;
-  &__reserv{
-  background: linear-gradient(0deg, $color-primary, $color-secondary);
-  color: $background-color;
-  height: 3em;
-  padding: 0 1.5em;
-  border-radius: 1.5em;
-  }
-  &__stage{
-    border: solid black 1px;border-radius: 1em;
-    display: flex; flex-direction: row;
-    align-content: baseline;
-    &:hover{
-      background-color: rgba($color-primary, 0.2);
-    }
-  }
-}
-
-//sections
-header,
-#localisation,
-#reservation {
-  text-align: center;
-}
-#reservation {
-  background-color: $background-color;
-  padding: 1em;
-  margin-bottom: 1em;
-  :nth-child(1) {
-    font-weight: 200;
-  }
-}
-#fonctionnement {
-  padding: 1em;
-  margin-bottom: 1em;
-}
-#restaurants {
-  background-color: $background-color;
-  padding: 1em;
-}
-
-footer {
-  background-color: rgb(56, 56, 56);
-  color: #fff;
-  padding: 1em;
-  .white_logo {
-    fill: #fff;
-    width: 6em;
-  }
+.container2 {
+  font-weight: 300;
+  font-size: 1.1em;
 }
