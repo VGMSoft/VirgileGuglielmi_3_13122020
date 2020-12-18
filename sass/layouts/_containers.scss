@@ -28,7 +28,7 @@ header,
   margin-bottom: 1em;
   .reserv__title {
     font-weight: 100;
-    width: 10em;
+    width: 15em;
     margin: auto;
   }
   .reserv__subtitle {
@@ -46,4 +46,16 @@ header,
 }
 #restaurants {
   background-color: $background-color;
+}
+
+.menu {
+  padding: 1em;
+  border-radius: 3em 3em 0 0;
+  background-color: $background-color;
+  position: relative; top: 1.5em;
+  margin-top: -5em;
+  &__title {
+    font-family: "Shrikhand";
+    font-size: 1.75em;
+  }
 }

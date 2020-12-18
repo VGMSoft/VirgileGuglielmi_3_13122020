@@ -2,10 +2,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 1em 0.5em #000;
+  
   #brand {
     padding: 1.25em 0 0.5em 0;
-    box-shadow: 0 5px 5px #000;
+    box-shadow: 0 2px 5px darken($background-color, 15%);
     .logo {
       width: 10em;
       height: auto;

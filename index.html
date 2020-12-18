@@ -28,6 +28,11 @@
   <body>
     <header>
       <div id="brand">
+        <!--<div class="brand__wrap">
+          <svg>
+            <use href="./public/img/logo/ohmyfood@2x.svg#black"></use>
+          </svg>
+        </div>-->
         <img
           src="./public/img/logo/ohmyfood@2x.svg"
           alt="[ohmyfood]"
@@ -80,49 +85,48 @@
 
       <section id="restaurants">
         <h2>Restaurants</h2>
-
+        <div class="card__mask">Nouveau</div>
         <a
           href="./restaurants/palettedugout.html"
           id="palette_du_gout"
           class="card"
         >
-          <!--<p class="new">Nouveau</p>-->
-          <figure class="card__body">
-            <div class="card__header">
-              <div class="card__header__mask">Nouveau</div>
-              <img />
-            </div>
-            <div class="card__body">
-              <div class="card__body__text">
-                <p>La palette du go&ucirc;t</p>
+          <article class="card__body">
+            
+              <img
+                src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="[La Palette du goût]"
+              />
+            <div class="card__footer">
+              <div>
+                <h3>La palette du go&ucirc;t</h3>
                 <p>Ménilmontant</p>
               </div>
-              <i class="far fa-heart"></i>
+              <i class="fal fa-heart"></i>
             </div>
-          </figure>
+          </article>
         </a>
-        <!--
+        <div class="card__mask">Nouveau</div>
         <a
           href="./restaurants/noteenchantée.html"
           id="note_enchantée"
           class="card"
         >
-          <p class="new">Nouveau</p>
-          <figure>
-            <div class="figimg">
+          <article class="card__body">
+            <div class="card__header">
               <img
                 src="./public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                alt=""
+                alt="[La note enchantée]"
               />
             </div>
-            <figcaption>
+            <div class="card__footer">
               <div>
-                <p>La note enchantée</p>
+                <h3>La note enchantée</h3>
                 <p>Charonne</p>
               </div>
-              <i class="far fa-heart"></i>
-            </figcaption>
-          </figure>
+              <i class="fal fa-heart"></i>
+            </div>
+          </article>
         </a>
 
         <a
@@ -130,21 +134,21 @@
           id="palette_du_gout"
           class="card"
         >
-          <figure>
-            <div class="figimg">
+          <article class="card__body">
+            <div class="card__header">
               <img
-                src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                alt=""
+                src="./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                alt="[À la française]"
               />
             </div>
-            <figcaption>
+            <div class="card__footer">
               <div>
-                <p>&Agrave; la fran&ccedil;aise</p>
+                <h3>&Agrave; la fran&ccedil;aise</h3>
                 <p>Cité Rouge</p>
               </div>
-              <i class="far fa-heart"></i>
-            </figcaption>
-          </figure>
+              <i class="fal fa-heart"></i>
+            </div>
+          </article>
         </a>
 
         <a
@@ -152,31 +156,27 @@
           id="delices_des_sens"
           class="card"
         >
-          <figure>
-            <div class="figimg">
+          <article class="card__body">
+            <div class="card__header">
               <img
-                src="./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt=""
               />
             </div>
-            <figcaption>
+            <div class="card__footer">
               <div>
-                <p>Le délice des sens</p>
+                <h3>Le délice des sens</h3>
                 <p>Folie-Méricourt</p>
               </div>
-              <i class="far fa-heart"></i>
-            </figcaption>
-          </figure>
+              <i class="fal fa-heart"></i>
+            </div>
+          </article>
         </a>
-
-      --></section>
+      </section>
     </main>
+
     <footer class="footer">
-      <img
-        src="../public/img/logo/ohmyfood@2x.svg"
-        alt="[ohmyfood]"
-        class="footer__logo"
-      />
+      <h3 class="footer__logo">ohmyfood</h3>
       <ul>
         <li>
           <i class="fas fa-utensils"></i>

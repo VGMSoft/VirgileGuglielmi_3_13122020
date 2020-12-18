@@ -15,21 +15,26 @@
   display: flex;
   flex-direction: row;
   align-content: baseline;
-  width: 97%;
-  margin-left: 3%;
   padding: 1.5em;
   background-color: lighten($background-color, 3%);
   box-shadow: 0.25em 0.25em 1em darken($background-color, 15%);
   border-radius: 1.25em;
-  .fas {
-    color: darken($background-color, 45%);
-    font-size: 1.25em;
-    margin-left: 1em;
-  }
-  &:hover {
-    background-color: rgba($color-primary, 0.2);
+  &__func {
+    width: 97%;
+    margin-left: 3%;
     .fas {
-      color: $color-primary;
+      color: darken($background-color, 45%);
+      font-size: 1.25em;
+      margin-left: 1em;
     }
+    &:hover {
+      background-color: rgba($color-primary, 0.2);
+      .fas {
+        color: $color-primary;
+      }
+    }
+  }
+  &__menu {
+    margin-bottom: 1em;
   }
 }
