@@ -25,12 +25,14 @@
   &__mask {
     color: darken($color-tertiary, 37%);
     background-color: $color-tertiary;
+    position: relative;
+    left: 75%;
+    top: 2.5em;
     padding: 0.5em;
     height: 2em;
-    width: 5em;
-    position: relative;
-    left: 260px;
-    top: 40px;
+    width: 5.5em;
+    text-align: center;
+    font-weight: 500;
     border-radius: 2px;
     font-size: 0.9em;
   }
@@ -46,7 +48,6 @@
     }
     i {
       font-size: 1.5em;
-      vertical-align: middle;
     }
   }
 }

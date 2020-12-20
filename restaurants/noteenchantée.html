@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--local_CSS_Files-->
-    <link rel="stylesheet" type="text/css" href="../public/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/prefixed/styles.css" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="./public/css/responsive_xlarge.css"
+      href="../public/css/responsive_xlarge.css"
     />
     <!--FontAwesome-->
     <link
@@ -27,7 +27,7 @@
 
   <body>
     <header>
-      <div id="brand">
+      <div class="brand">
         <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
         <img
           src="../public/img/logo/ohmyfood@2x.svg"
@@ -45,43 +45,92 @@
       />
 
       <section class="menu">
-        <h1 class="menu__title">La note enchantée</h1>
-        <span>
+        <div class="restaurant__name">
+          <h1 class="menu__title">La note enchantée</h1>
           <i class="far fa-heart"></i>
-        </span>
-
-        <h2>Entrées</h2>
-        <div class="selector selector__menu">
-          Ravioles de foie gras Accompagnés de leur crème à la truffe 25€
-        </div>
-        <div class="selector selector__menu">
-          Caviar osciètre Sur blini à la farine de blé noir 35€
-        </div>
-        <div class="selector selector__menu">
-          Homard et espuma de potiron Mariné aux zestes d'orange 20€
-        </div>
-        <div class="selector selector__menu">
-          Foie gras de canard cuit entier Confiture de figue et pain toasté 35€
         </div>
 
-        <h2>Plats</h2>
-        <div class="selector selector__menu">
-          Noix de coquilles Saint-Jacques Sur lit de purée de céleri-rave 40€
-        </div>
-        <div class="selector selector__menu">Langoustine poêlée Purée de patate douce 35€</div>
-        <div class="selector selector__menu">
-          Mijoté de queue de boeuf Et riz sauvage aux zestes de citron 44€
-        </div>
+        <h2>entrées</h2>
 
-        <h2>Desserts</h2>
-        <div class="selector selector__menu">
-          Macaron noisette et chocolat Glace au caramel brun et sel de Guérande
-          18€
-        </div>
-        <div class="selector selector__menu">
-          Baba au rhum revisité Avec son coulis de citron 22€
-        </div>
-        <div class="selector selector__menu">Tarte au citron meringuée Déstructurée 23€</div>
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Fricassée d'escargot</h3>
+            <p>Au piment d'Espelette</p>
+          </div>
+          <div class="menu__price">25€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Foie gras de canard mi-cuit</h3>
+            <p>Et ses copeaux de truffe noire</p>
+          </div>
+          <div class="menu__price">35€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Oeuf au plat</h3>
+            <p>Assaisonné à la truffe sur lit de caviar</p>
+          </div>
+          <div class="menu__price">20€</div>
+        </article>
+
+        <h2>plats</h2>
+
+        <article class="selector__menu selector">
+          <div class="menu__text">
+            <h3>Filet de boeuf aux herbes</h3>
+            <p>Accompagné de sa ribambelle de légumes</p>
+          </div>
+          <div class="menu__price">40€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Parmentier de queue de boeuf</h3>
+            <p>À la truffe noire sur sa purée de panais</p>
+          </div>
+          <div class="menu__price">35€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Filet de turbot</h3>
+            <p>Aux agrumes</p>
+          </div>
+          <div class="menu__price">44€</div>
+        </article>
+
+        <h2>desserts</h2>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Paris-Brest</h3>
+            <p>Revisité</p>
+          </div>
+          <div class="menu__price">18€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Macaron au chocolat d'exception</h3>
+            <p>Et glace à la vanille de Madagascar</p>
+          </div>
+          <div class="menu__price">22€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Mousse au chocolat</h3>
+            <p>Au piment d'Espelette et à la truffe noire</p>
+          </div>
+          <div class="menu__price">23€</div>
+        </article>
+
+        <a href="#restaurants" class="button--purple" role="button">
+          Commander
+        </a>
       </section>
     </main>
 

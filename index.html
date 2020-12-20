@@ -27,12 +27,7 @@
 
   <body>
     <header>
-      <div id="brand">
-        <!--<div class="brand__wrap">
-          <svg>
-            <use href="./public/img/logo/ohmyfood@2x.svg#black"></use>
-          </svg>
-        </div>-->
+      <div class="brand">
         <img
           src="./public/img/logo/ohmyfood@2x.svg"
           alt="[ohmyfood]"
@@ -40,12 +35,12 @@
         />
       </div>
 
-      <div id="localisation">
+      <div class="localisation">
         <i class="fas fa-map-marker-alt"></i>
         <span class="i__text">Paris, Belleville</span>
       </div>
 
-      <section id="reservation">
+      <section class="reserv">
         <div class="reserv__title">
           <h1>Réservez le menu qui vous convient</h1>
         </div>
@@ -54,15 +49,13 @@
             Découvrez des restaurants d'exception, selectionnés par nos soins.
           </p>
         </div>
-        <a href="#restaurants"
-          ><button class="button button__reserv">
-            Explorez nos restaurants
-          </button></a
-        >
+        <a href="#restaurants" class="button--purple" role="button">
+          Explorez nos restaurants
+        </a>
       </section>
     </header>
     <main>
-      <section id="fonctionnement">
+      <section class="fonctionnement">
         <h2>Fonctionnement</h2>
         <div class="number">1</div>
         <div class="selector selector__func">
@@ -83,7 +76,7 @@
         </div>
       </section>
 
-      <section id="restaurants">
+      <section id="restaurants" class="restaurants">
         <h2>Restaurants</h2>
         <div class="card__mask">Nouveau</div>
         <a
@@ -92,11 +85,10 @@
           class="card"
         >
           <article class="card__body">
-            
-              <img
-                src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                alt="[La Palette du goût]"
-              />
+            <img
+              src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="[La Palette du goût]"
+            />
             <div class="card__footer">
               <div>
                 <h3>La palette du go&ucirc;t</h3>
@@ -129,11 +121,7 @@
           </article>
         </a>
 
-        <a
-          href="./restaurants/francaise.html"
-          id="palette_du_gout"
-          class="card"
-        >
+        <a href="./restaurants/francaise.html" id="francaise" class="card">
           <article class="card__body">
             <div class="card__header">
               <img

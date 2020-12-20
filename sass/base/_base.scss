@@ -1,12 +1,12 @@
 //general__settings
 * {
   box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
   font-family: "Roboto", "sans-serif";
+}
+
+body {
   margin: 0;
+  
 }
 a {
   text-decoration: inherit;
@@ -16,12 +16,14 @@ ul {
   list-style: none;
   padding-left: 0;
 }
-.i__text{
+.i__text {
   margin-left: 1em;
-  &--s{
-    margin-left: .5em;
+  &--s {
+    margin-left: 0.5em;
   }
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
 }

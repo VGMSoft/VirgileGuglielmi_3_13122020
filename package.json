@@ -4,7 +4,8 @@
   "description": "SASS / Animations",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/styles.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/styles.css",
+    "prefix": "postcss ./public/css/styles.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   ],
   "author": "Virgile Guglielmi",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/VGMSoft/VirgileGuglielmi_3_13122020/issues"
   },

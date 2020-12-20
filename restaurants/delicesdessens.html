@@ -14,7 +14,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="./public/css/responsive_xlarge.css"
+      href="../public/css/responsive_xlarge.css"
     />
     <!--FontAwesome-->
     <link
@@ -27,7 +27,7 @@
 
   <body>
     <header>
-      <div id="brand">
+      <div class="brand">
         <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
         <img
           src="../public/img/logo/ohmyfood@2x.svg"
@@ -39,47 +39,98 @@
 
     <main>
       <img
-        src="../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        src="../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
         alt="[Le délice des sens]"
         class="restaurant__pic"
       />
 
       <section class="menu">
-        <h1 class="menu__title">Le délice des sens</h1>
-        <span>
-          <i class="far fa-heart"></i>
-        </span>
-
-        <h2>Entrées</h2>
-        <div class="selector selector__menu">
-          Fricassée d'escargot Au piment d'Espelette 25€
-        </div>
-        <div class="selector selector__menu">
-          Foie gras de canard mi-cuit Et ses copeaux de truffe noire 35€
-        </div>
-        <div class="selector selector__menu">
-          Oeuf au plat Assaisonné à la truffe sur lit de caviar 20€
+        <div class="restaurant__name">
+          <h1 class="menu__title">Le délice des sens</h1>
+          <span> <i class="far fa-heart"></i></span>
         </div>
 
-        <h2>Plats</h2>
-        <div class="selector selector__menur">
-          Filet de boeuf aux herbes Accompagné de sa ribambelle de légumes 40€
-        </div>
-        <div class="selector selector__menu">
-          Parmentier de queue de boeuf À la truffe noire sur sa purée de panais
-          35€
-        </div>
-        <div class="selector selector__menu">Filet de turbot Aux agrumes 44€</div>
+        <h2>entrées</h2>
 
-        <h2>Desserts</h2>
-        <div class="selector selector__menu">Paris-Brest Revisité 18€</div>
-        <div class="selector selector__menu">
-          Macaron au chocolat d'exception Et glace à la vanille de Madagascar
-          22€
-        </div>
-        <div class="selector selector__menu">
-          Mousse au chocolat Au piment d'Espelette et à la truffe noire 23€
-        </div>
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Tartare de thon</h3>
+            <p>Assaisonné au yuzu</p>
+          </div>
+          <div class="menu__price">25€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Bouchée de homard croustillant</h3>
+            <p>Et sa farandole de petits légumes</p>
+          </div>
+          <div class="menu__price">35€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Velouté de cèpes</h3>
+            <p>Aux truffes</p>
+          </div>
+          <div class="menu__price">20€</div>
+        </article>
+
+        <h2>plats</h2>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Poulet rôti aux herbes de Provence</h3>
+            <p>Et sa crème de truffe</p>
+          </div>
+          <div class="menu__price">40€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Langouste rôtie</h3>
+            <p>Et ses légumes de saison</p>
+          </div>
+          <div class="menu__price">35€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Côte de boeuf Angus</h3>
+            <p>Et sa purée de panais</p>
+          </div>
+          <div class="menu__price">44€</div>
+        </article>
+
+        <h2>desserts</h2>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Farandole de desserts</h3>
+            <p>Du chef</p>
+          </div>
+          <div class="menu__price">18€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Crème brulée</h3>
+            <p>Revisitée</p>
+          </div>
+          <div class="menu__price">22€</div>
+        </article>
+
+        <article class="selector selector__menu">
+          <div class="menu__text">
+            <h3>Tiramisu</h3>
+            <p>À la noisette</p>
+          </div>
+          <div class="menu__price">23€</div>
+        </article>
+
+        <a href="#restaurants" class="button--purple" role="button">
+          Commander
+        </a>
       </section>
     </main>
 

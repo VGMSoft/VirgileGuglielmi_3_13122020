@@ -1,30 +1,33 @@
-.button {
-  border: none;
-  &__reserv {
-    background: linear-gradient(0deg, $color-primary, $color-secondary);
-    color: $background-color;
-    height: 3em;
-    padding: 0 1.5em;
-    border-radius: 1.5em;
-    font-size: 1em;
-    font-weight: 200;
-    margin-bottom: 3em;
-  }
+.button--purple {
+  display: block;
+  color: $background-color;
+  background: linear-gradient(350deg, $color-primary, $color-secondary);
+  border-radius: 1.6em;
+  padding: 1em 1em;
+  width: 65%;
+  margin: auto;
+  font-size: 1em;
+  margin-bottom: 3em;
+  font-family: "Roboto", "sans-serif";
+  font-weight: 500;
+  text-align: center;
 }
+
 .selector {
   display: flex;
   flex-direction: row;
   align-content: baseline;
-  padding: 1.5em;
+  padding: 1.75em;
   background-color: lighten($background-color, 3%);
   box-shadow: 0.25em 0.25em 1em darken($background-color, 15%);
   border-radius: 1.25em;
   &__func {
     width: 97%;
     margin-left: 3%;
+    font-weight: 500;
     .fas {
       color: darken($background-color, 45%);
-      font-size: 1.25em;
+      font-size: 1.2em;
       margin-left: 1em;
     }
     &:hover {
@@ -36,5 +39,13 @@
   }
   &__menu {
     margin-bottom: 1em;
+    padding: .75em;
+    display: flex;
+    justify-content: space-between;
+    p{
+      margin: 0;
+      font-weight: 300;
+      font-size: .95em;
+    }
   }
 }
