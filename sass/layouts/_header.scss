@@ -2,15 +2,14 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   .brand {
     padding: 1.25em 0 .75em 0;
-    
-    .logo {
+    &__logo {
       width: 10.5em;
       height: auto;
     }
-    .fa-arrow-left {
+    &__arrow {
       font-size: 1.25em;
       position: absolute;
       left: 1.2em;

@@ -9,7 +9,7 @@ header,
 .fonctionnement,
 .reserv,
 .restaurants {
-  padding: 1em;
+  padding: 1.1em;
 }
 
 .brand {
@@ -44,7 +44,7 @@ header,
 }
 .fonctionnement {
   background-color: #fff;
-  margin-bottom: 3.5em;
+  margin-bottom: 1em;
   h2 {
     margin-bottom: 0.5em;
     margin-top: 1em;
@@ -54,6 +54,7 @@ header,
   background-color: $background-color;
   h2 {
     margin-top: 1.5em;
+    margin-bottom: 1em;
   }
   &:nth-child {
     margin-bottom: 0;
@@ -64,9 +65,9 @@ header,
   padding: 1em;
   border-radius: 3em 3em 0 0;
   background-color: $background-color;
-  position: relative;
-  top: 1.5em;
-  margin-top: -5em;
+  z-index: 2;
+  margin-top: -50px;
+  
   &__title {
     font-family: "Shrikhand";
     font-size: 1.75em;
