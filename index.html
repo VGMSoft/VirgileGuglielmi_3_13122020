@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <title>ohmyfood</title>
+
     <meta charset="utf-8" />
     <meta
       name="description"
@@ -10,12 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--local_CSS_Files-->
-    <link rel="stylesheet" type="text/css" href="./public/css/styles.css" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="./public/css/responsive_xlarge.css"
+      href="./public/css/prefixed/styles.css"
     />
+    <!--Normalize
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />-->
     <!--FontAwesome-->
     <link
       rel="stylesheet"
@@ -54,6 +61,7 @@
         </a>
       </section>
     </header>
+
     <main>
       <section class="fonctionnement">
         <h2>Fonctionnement</h2>
@@ -103,12 +111,11 @@
               <h3>La palette du go&ucirc;t</h3>
               <p>Ménilmontant</p>
             </div>
-            <span class="fa-stack fa-1x">
-              <i class="fas fa-heart fa-stack"></i>
-              <i class="fal fa-heart fa-stack"></i>
-            </span>
           </div>
         </a>
+        <div class="fa-stack">
+          <i class="fas fa-heart fa-stack-1x"></i>
+        </div>
 
         <a
           href="./restaurants/noteenchantée.html"
@@ -127,9 +134,11 @@
               <h3>La note enchantée</h3>
               <p>Charonne</p>
             </div>
-            <i class="fal fa-heart"></i>
           </div>
         </a>
+        <div class="fa-stack">
+          <i class="fas fa-heart fa-stack-1x"></i>
+        </div>
 
         <a href="./restaurants/francaise.html" id="francaise" class="card">
           <div class="card__body">
@@ -143,9 +152,11 @@
               <h3>&Agrave; la fran&ccedil;aise</h3>
               <p>Cité Rouge</p>
             </div>
-            <i class="fal fa-heart"></i>
           </div>
         </a>
+        <div class="fa-stack">
+          <i class="fas fa-heart fa-stack-1x"></i>
+        </div>
 
         <a
           href="./restaurants/delicesdessens.html"
@@ -163,9 +174,11 @@
               <h3>Le délice des sens</h3>
               <p>Folie-Méricourt</p>
             </div>
-            <i class="fal fa-heart"></i>
           </div>
         </a>
+        <div class="fa-stack">
+          <i class="fas fa-heart fa-stack-1x"></i>
+        </div>
       </section>
     </main>
 

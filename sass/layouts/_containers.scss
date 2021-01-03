@@ -25,15 +25,20 @@ header,
   box-shadow: inset 0 2px 5px darken($background-color, 15%);
   color: lighten(#000, 25%);
   font-weight: 500;
+  i {
+    margin-right: 1em;
+  }
 }
 .reserv {
   background-color: $background-color;
   margin-bottom: 1em;
   text-align: center;
+  padding-bottom: 0;
   &__title {
-    font-weight: 100;
-    width: 15em;
-    margin: 1.5em auto 0 auto;
+    font-size: 0.75em;
+    font-weight: 300;
+    width: 20em;
+    margin: 1.5em auto 1.5em auto;
   }
   &__subtitle {
     font-weight: 300;
@@ -46,12 +51,13 @@ header,
   background-color: #fff;
   margin-bottom: 1em;
   h2 {
-    margin-bottom: 0.5em;
-    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
   }
 }
 .restaurants {
   background-color: $background-color;
+  position: relative;
   h2 {
     margin-top: 1.5em;
     margin-bottom: 1em;
@@ -61,52 +67,78 @@ header,
   }
 }
 
-.menu {
+.resto {
   padding: 1em;
-  border-radius: 3em 3em 0 0;
-  background-color: $background-color;
+  border-radius: 2em 2em 0 0;
+  background-color: darken($background-color, 1%);
   z-index: 2;
   margin-top: -50px;
-  
-  &__title {
-    font-family: "Shrikhand";
-    font-size: 1.75em;
-  }
-  &__text {
-    overflow-wrap: normal;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  &__prix {
-    vertical-align: bottom;
-    font-weight: 500;
+  position: relative;
+
+  &__name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 1.5em 0 0;
+    margin-bottom: 1.5em;
+    h1 {
+      font-family: "Shrikhand";
+      font-size: 1.5em;
+    }
+    i {
+      font-size: 1.5em;
+      position: relative;
+      top: 50%;
+    }
   }
 
   h2 {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: 300;
-    border-bottom: solid $color-tertiary 3px;
     padding-bottom: 0.5em;
     margin-bottom: 0.75em;
-    width: 2.5em;
-  }
-}
-.restaurant__name {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1em 1.5em 0 0;
-  i {
-    font-size: 1.5em;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    .fa-heart:before:active {
-      overflow: hidden;
-      background-color: $color-primary;
+    &::after {
+      content: " ";
+      display: block;
+      background-color: $color-tertiary;
+      width: 2.5em;
+      height: 2.5px;
+      margin-top: 0.2em;
+      margin-bottom: 0.5em;
     }
   }
 }
+
+.plate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: baseline;
+  background-color: lighten($background-color, 5%);
+  box-shadow: 5px 5px 5px darken($background-color, 5%);
+  border-radius: 1.25em;
+  margin-bottom: 1em;
+  &__name {
+    padding: 1em;
+  }
+  &__price {
+    vertical-align: bottom;
+    font-weight: 500;
+  }
+}
+.check {
+  background-color: $color-tertiary;
+  color: #fff;
+  height: 100%;
+}
+
+/*overflow-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    .fa-heart:before:active {
+        overflow: hidden;
+        background-color: $color-primary;
+      }*/
