@@ -18,6 +18,9 @@
     box-shadow: 5px 5px 6px darken($background-color, 30%);
   width: 65%;
   }
+  &--menu {
+    margin-top: 2em;
+  }
 }
 
 .stages {

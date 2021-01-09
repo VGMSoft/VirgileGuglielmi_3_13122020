@@ -456,9 +456,9 @@ p {
 }
 
 .fa-stack {
-  position: absolute;
+  position: relative;
   top: -35px;
-  left: 80%;
+  left: 280px;
   font-size: 1.4em;
 }
 
@@ -493,6 +493,9 @@ p {
   opacity: 0.8;
   box-shadow: 5px 5px 6px #aaaaaa;
   width: 65%;
+}
+.button--purple--menu {
+  margin-top: 2em;
 }
 
 .stages {
@@ -558,6 +561,78 @@ p {
   background-color: #99e2d0;
   color: #fff;
   height: 3em;
+}
+
+.plate {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 4.5em;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1em;
+  border-radius: 1.25em;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px #e9e9e9;
+}
+.plate__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1em;
+  width: 100%;
+}
+.plate__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 300ms ease-in-out;
+}
+.plate__details h3 {
+  font-size: 1.2em;
+  display: inline;
+}
+.plate__details p {
+  font-weight: 200;
+  width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.plate__price {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 500;
+}
+.plate__check {
+  position: absolute;
+  right: -4em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 1.25em 1.25em 0;
+  background-color: #99e2d0;
+  color: #fff;
+  height: 4.5em;
+  width: 4em;
+  position: absolute;
+  transition: all 300ms ease-in-out;
+}
+.plate__check i {
+  font-size: 1.25em;
+  transition: all 300ms ease-in-out;
+}
+.plate:hover {
+  /*& > .plate__info {
+    transform: scaleX(.75);
+  }*/
+}
+.plate:hover > .plate__check {
+  display: flex;
+  transform: translateX(-4em);
+}
+.plate:hover > .plate__check > i {
+  transform: rotate(180deg);
 }
 
 header {
@@ -718,68 +793,6 @@ header,
   margin-bottom: 0.5em;
 }
 
-.plate {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-  justify-content: space-between;
-  box-shadow: 5px 5px 5px #e9e9e9;
-  margin-bottom: 1em;
-  height: 4.5em;
-  border-radius: 1.25em;
-  overflow: hidden;
-  width: 100%;
-}
-.plate__info {
-  background-color: white;
-  padding: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  flex-shrink: 3;
-}
-.plate__name {
-  width: 200px;
-  display: block;
-  padding-right: 1em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.plate__name h3 {
-  font-size: 1.2em;
-}
-.plate__name p {
-  font-weight: 200;
-}
-.plate__price {
-  display: flex;
-  align-items: flex-end;
-  font-weight: 500;
-}
-.plate__check {
-  position: absolute;
-  right: -4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 1.25em 1.25em 0;
-  background-color: #99e2d0;
-  color: #fff;
-  height: 4.5em;
-  width: 4em;
-  position: absolute;
-  transition: all 300ms ease-in-out;
-}
-.plate__check i {
-  font-size: 1.25em;
-}
-.plate:hover > .plate__check {
-  display: flex;
-  transform: translateX(-4em);
-}
-
 /*
 
     .fa-heart:before:active {
@@ -793,6 +806,14 @@ header,
   z-index: 1;
 }
 
+@media all and (max-height: 667px) and (orientation: landscape) {
+  .fa-stack {
+    position: absolute;
+    top: -35px;
+    left: 556px;
+    font-size: 1.4em;
+  }
+}
 @media all and (min-width: 768px) {
   .card {
     width: 48%;
