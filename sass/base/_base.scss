@@ -11,7 +11,8 @@ a {
   text-decoration: inherit;
   color: inherit;
 }
-ul {
+ul,
+ol {
   list-style: none;
   padding-left: 0;
 }
@@ -20,4 +21,8 @@ h2,
 h3,
 p {
   margin: 0;
+}
+
+i {
+  font-family: "Roboto", "sans-serif";
 }

@@ -1,0 +1,25 @@
+
+@media only screen and (min-width: 1024px) {
+  .card {
+    &__container {
+      grid-template: 1fr / repeat(4, 1fr);
+    }
+  }
+  .steps {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .step{
+      width: 30%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  .card {
+    &__container {
+      grid-template: 1fr / repeat(4, 1fr);
+    }
+  }
+}
+

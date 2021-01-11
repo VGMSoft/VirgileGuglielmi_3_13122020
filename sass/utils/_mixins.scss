@@ -1,0 +1,5 @@
+@mixin edit-icon($color, $stroke-width, $stroke-color) {
+  color: $color;
+  -webkit-text-stroke-width: $stroke-width;
+  -webkit-text-stroke-color: $stroke-color;
+}
