@@ -1,25 +1,40 @@
-
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1224px) {
   .card {
     &__container {
-      grid-template: 1fr / repeat(4, 1fr);
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     }
   }
+  .function, .restos__container{
+    width: 100vh;
+    margin: auto;
+  }
+  .function{
+    padding: 2em 0;
+  }
   .steps {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    .step{
+    
+    .step {
       width: 30%;
     }
+  }
+  .plates{
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr) ;
+    gap: 3em;
+    
   }
 }
 
 @media only screen and (min-width: 1824px) {
+  body {
+    height: 100vh;
+  }
   .card {
     &__container {
-      grid-template: 1fr / repeat(4, 1fr);
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     }
   }
 }
-

@@ -4,7 +4,11 @@
   font-family: "Roboto", "sans-serif";
 }
 
-body {
+body,
+.reserv,
+.function,
+.restos {
+  width: 100vw;
   margin: 0;
 }
 a {

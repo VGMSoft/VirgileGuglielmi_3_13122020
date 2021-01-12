@@ -349,7 +349,11 @@ template {
   font-family: "Roboto", "sans-serif";
 }
 
-body {
+body,
+.reserv,
+.function,
+.restos {
+  width: 100vw;
   margin: 0;
 }
 
@@ -424,7 +428,7 @@ i {
   height: 180px;
 }
 .card__body img:hover {
-  transform: scale(1.1);
+  transform: scale(1.025);
   transition: transform 400ms ease-in-out;
 }
 .card__mask {
@@ -481,8 +485,7 @@ i {
   box-shadow: 5px 5px 6px #d0d0d0;
   width: 15em;
   padding: 1em 1em;
-  margin: auto;
-  margin-bottom: 2em;
+  margin: 3em auto;
   font-size: 1em;
   font-family: "Roboto", "sans-serif";
   font-weight: 500;
@@ -495,11 +498,6 @@ i {
 }
 .button--purple--menu {
   margin-top: 2em;
-}
-
-.stages {
-  position: relative;
-  margin-bottom: 2em;
 }
 
 .select {
@@ -741,7 +739,6 @@ header,
 .reserv__subtitle {
   font-weight: 300;
   font-size: 1.1em;
-  margin-bottom: 2em;
   color: #4d4d4d;
 }
 
@@ -830,7 +827,7 @@ header,
     font-size: 1.4em;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 768px) {
   .card__container {
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
@@ -840,9 +837,18 @@ header,
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1224px) {
   .card__container {
-    grid-template: 1fr/repeat(4, 1fr);
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  }
+
+  .function, .restos__container {
+    width: 100vh;
+    margin: auto;
+  }
+
+  .function {
+    padding: 2em 0;
   }
 
   .steps {
@@ -853,10 +859,20 @@ header,
   .steps .step {
     width: 30%;
   }
+
+  .plates {
+    display: grid;
+    grid-template: 1fr/repeat(3, 1fr);
+    gap: 3em;
+  }
 }
 @media only screen and (min-width: 1824px) {
+  body {
+    height: 100vh;
+  }
+
   .card__container {
-    grid-template: 1fr/repeat(4, 1fr);
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
 }
 

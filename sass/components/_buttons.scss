@@ -6,8 +6,7 @@
   box-shadow: 5px 5px 6px darken($background-color, 15%);
   width: 15em;
   padding: 1em 1em;
-  margin: auto;
-  margin-bottom: 2em;
+  margin: 3em auto;
   font-size: 1em;
   font-family: "Roboto", "sans-serif";
   font-weight: 500;
@@ -20,11 +19,6 @@
   &--menu {
     margin-top: 2em;
   }
-}
-
-.stages {
-  position: relative;
-  margin-bottom: 2em;
 }
 
 .select {
