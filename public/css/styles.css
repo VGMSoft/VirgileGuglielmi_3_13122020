@@ -531,39 +531,32 @@ i {
 }
 
 .plate {
+  position: relative;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   height: 4.5em;
-  width: 100%;
-  position: relative;
   margin-bottom: 1em;
   border-radius: 1.25em;
   overflow: hidden;
   box-shadow: 5px 5px 5px #e9e9e9;
+  background-color: white;
 }
 .plate__info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: white;
   padding: 1em;
-  width: 100%;
+  width: 80%;
   cursor: pointer;
 }
-.plate__details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  transition: all 300ms ease-in-out;
-}
-.plate__details h3 {
+.plate__info h3 {
   font-size: 1.2em;
-  display: inline;
 }
-.plate__details p {
+.plate__info p {
   font-weight: 200;
-  width: 150px;
+}
+.plate__info h3, .plate__info p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -572,6 +565,7 @@ i {
   display: flex;
   align-items: flex-end;
   font-weight: 500;
+  padding: 1em;
 }
 .plate__check {
   position: absolute;
@@ -584,22 +578,18 @@ i {
   color: #fff;
   height: 4.5em;
   width: 4em;
-  transition: all 300ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 .plate__check i {
+  display: block;
   font-size: 1.25em;
-}
-.plate:hover {
-  /*& > .plate__info {
-    transform: scaleX(.75);
-  }*/
+  transition: all 600ms ease-in-out;
 }
 .plate:hover > .plate__check {
-  display: flex;
-  transform: translateX(-4em);
+  right: 0em;
 }
 .plate:hover > .plate__check > i {
-  transform: rotate(180deg);
+  transform: rotate(-360deg);
 }
 
 .steps {
@@ -771,6 +761,14 @@ header,
   margin-top: -50px;
   position: relative;
 }
+.resto__pic {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 40vh;
+  min-height: 17em;
+  z-index: 1;
+}
 .resto__name {
   display: flex;
   flex-direction: row;
@@ -806,13 +804,6 @@ header,
 .card__container {
   display: grid;
   gap: 1em;
-}
-
-.restaurant__pic {
-  object-fit: cover;
-  width: 100%;
-  height: 275px;
-  z-index: 1;
 }
 
 @media only screen and (min-width: 321px) and (orientation: landscape) {

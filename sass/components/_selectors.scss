@@ -1,41 +1,32 @@
 .plate {
+  position: relative;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   height: 4.5em;
-  width: 100%;
-  position: relative;
   margin-bottom: 1em;
   border-radius: 1.25em;
   overflow: hidden;
   box-shadow: 5px 5px 5px darken($background-color, 5%);
-
+  background-color: lighten($background-color, 5%);
   &__info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: lighten($background-color, 5%);
     padding: 1em;
-    width: 100%;
+    width: 80%;
     cursor: pointer;
-    //flex-shrink: 3;
-  }
-
-  &__details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transition: all 300ms ease-in-out;
     h3 {
       font-size: 1.2em;
-      display: inline;
     }
     p {
       font-weight: 200;
-      width: 150px;
+    }
+    h3, p{
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+      
     }
   }
 
@@ -43,11 +34,12 @@
     display: flex;
     align-items: flex-end;
     font-weight: 500;
+    padding: 1em;
   }
   &__check {
     position: absolute;
     right: -4em;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0 1.25em 1.25em 0;
@@ -55,22 +47,19 @@
     color: #fff;
     height: 4.5em;
     width: 4em;
-    transition: all 300ms ease-in-out;
+    transition: all 400ms ease-in-out;
     i {
+      display: block;
       font-size: 1.25em;
-      //transition: all 300ms ease-in-out;
+      transition: all 600ms ease-in-out;
     }
   }
   &:hover {
     & > .plate__check {
-      display: flex;
-      transform: translateX(-4em);
+      right: 0em;
     }
     & > .plate__check > i {
-      transform: rotate(180deg);
+      transform: rotate(-360deg);
     }
-    /*& > .plate__info {
-      transform: scaleX(.75);
-    }*/
   }
 }
