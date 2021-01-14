@@ -11,15 +11,18 @@ body,
   width: 100vw;
   margin: 0;
 }
+
 a {
   text-decoration: inherit;
   color: inherit;
 }
+
 ul,
 ol {
   list-style: none;
   padding-left: 0;
 }
+
 h1,
 h2,
 h3,
@@ -27,6 +30,6 @@ p {
   margin: 0;
 }
 
-i {
-  font-family: "Roboto", "sans-serif";
+button {
+  border: none;
 }

@@ -375,8 +375,8 @@ p {
   margin: 0;
 }
 
-i {
-  font-family: "Roboto", "sans-serif";
+button {
+  border: none;
 }
 
 .number {
@@ -556,7 +556,8 @@ i {
 .plate__info p {
   font-weight: 200;
 }
-.plate__info h3, .plate__info p {
+.plate__info h3,
+.plate__info p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -584,12 +585,14 @@ i {
   display: block;
   font-size: 1.25em;
   transition: all 600ms ease-in-out;
+  transition-delay: 100ms;
+  transform: rotate(-180deg);
 }
 .plate:hover > .plate__check {
   right: 0em;
 }
 .plate:hover > .plate__check > i {
-  transform: rotate(-360deg);
+  transform: rotate(0deg);
 }
 
 .steps {
@@ -755,10 +758,8 @@ header,
 
 .resto {
   padding: 1em;
-  border-radius: 2em 2em 0 0;
   background-color: #f3f3f3;
   z-index: 2;
-  margin-top: -50px;
   position: relative;
 }
 .resto__pic {
@@ -773,8 +774,12 @@ header,
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1em 1.5em 0 0;
-  margin-bottom: 1.5em;
+  padding: 1.5em;
+  border-radius: 2em 2em 0 0;
+  background-color: #f3f3f3;
+  z-index: 2;
+  margin-top: -3em;
+  position: relative;
 }
 .resto__name h1 {
   font-family: "Shrikhand";
@@ -782,17 +787,14 @@ header,
 }
 .resto__name i {
   font-size: 1.5em;
-  position: relative;
-  top: 50%;
 }
 .resto h2 {
   text-transform: uppercase;
   font-size: 1em;
   font-weight: 300;
-  margin-top: 2.5em;
 }
 .resto h2::after {
-  content: " ";
+  content: "";
   display: block;
   background-color: #99e2d0;
   width: 2.5em;
@@ -865,6 +867,17 @@ header,
   .card__container {
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
+}
+.purle__heart {
+  width: 1.7em;
+  height: 1.7em;
+  stroke: #000;
+  stroke-width: 0.5pt;
+  fill: transparent;
+}
+.purle__heart:hover {
+  fill: url(#purple__gradient);
+  stroke: transparent;
 }
 
 /*# sourceMappingURL=styles.css.map */

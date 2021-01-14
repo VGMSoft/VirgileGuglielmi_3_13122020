@@ -71,10 +71,8 @@ header,
 
 .resto {
   padding: 1em;
-  border-radius: 2em 2em 0 0;
   background-color: darken($background-color, 1%);
   z-index: 2;
-  margin-top: -50px;
   position: relative;
 
 &__pic {
@@ -85,21 +83,22 @@ header,
     min-height: 17em;
     z-index: 1;
 }
-
   &__name {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1em 1.5em 0 0;
-    margin-bottom: 1.5em;
+    padding: 1.5em;
+    border-radius: 2em 2em 0 0;
+    background-color: #f3f3f3;
+    z-index: 2;
+    margin-top: -3em;
+    position: relative;
     h1 {
       font-family: "Shrikhand";
       font-size: 1.5em;
     }
     i {
       font-size: 1.5em;
-      position: relative;
-      top: 50%;
     }
   }
 
@@ -107,9 +106,8 @@ header,
     text-transform: uppercase;
     font-size: 1em;
     font-weight: 300;
-    margin-top: 2.5em;
     &::after {
-      content: " ";
+      content: "";
       display: block;
       background-color: $color-tertiary;
       width: 2.5em;
@@ -124,3 +122,8 @@ header,
   display: grid;
   gap: 1em;
 }
+
+
+
+
+    

@@ -15,3 +15,15 @@
 @import "./responsive/small";
 @import "./responsive/medium";
 @import "./responsive/desktop";
+
+.purle__heart {
+  width:1.7em;
+  height:1.7em;
+  stroke: #000;
+  stroke-width:.5pt;
+  fill: transparent;
+  &:hover {
+    fill: url(#purple__gradient);
+    stroke: transparent;
+  }
+}

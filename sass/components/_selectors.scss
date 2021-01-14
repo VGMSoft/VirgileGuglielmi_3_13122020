@@ -22,11 +22,11 @@
     p {
       font-weight: 200;
     }
-    h3, p{
+    h3,
+    p {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      
     }
   }
 
@@ -48,10 +48,13 @@
     height: 4.5em;
     width: 4em;
     transition: all 400ms ease-in-out;
+
     i {
       display: block;
       font-size: 1.25em;
       transition: all 600ms ease-in-out;
+      transition-delay: 100ms;
+      transform: rotate(-180deg);
     }
   }
   &:hover {
@@ -59,7 +62,7 @@
       right: 0em;
     }
     & > .plate__check > i {
-      transform: rotate(-360deg);
+      transform: rotate(0deg);
     }
   }
 }

@@ -13,7 +13,7 @@
     <link rel="icon" href="../public/img/favicon/android-chrome-512x512.png" />
     <link rel="icon" href="../public/img/favicon/apple-touch-icon.png" />
     <link rel="icon" href="../public/img/favicon/favicon-16x16.png" />
-    <link rel="icon" href="./public/img/favicon/favicon-32x32.png" />
+    <link rel="icon" href="../public/img/favicon/favicon-32x32.png" />
     <link rel="icon" href="../public/img/favicon/favicon.ico" />
 
     <link rel="icon" href="../favicon.ico" />
@@ -45,22 +45,54 @@
         />
       </div>
     </header>
+    <img
+      src="../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+      alt="[La Palette du goût]"
+      class="resto__pic"
+    />
 
     <main>
-      <img
-        src="../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-        alt="[La Palette du goût]"
-        class="resto__pic"
-      />
+      <header class="resto__name">
+        <h1>La palette du goût</h1>
 
-      <section class="resto">
-        <div class="resto__name">
-          <h1>La palette du goût</h1>
-          <i class="fas fa-heart"></i>
-        </div>
+        <!--propal 1
+          <svg>
+            <image
+              xlink:href="../public/img/logo/heart.svg"
+              width="30"
+              height="30"
+            />
+          </svg>-->
+        <!--propal 2
+          <object
+            data="../public/img/logo/heart.svg"
+            width="30"
+            height="30"
+            type="image/svg+xml"
+          ></object>-->
 
-        <section class="plates">
-          <section class="plates__catego">
+        <!--propal 3-->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          class="purle__heart"
+        >
+          <defs>
+            <linearGradient id="purple__gradient">
+              <stop offset="5%" stop-color="#9356dc" />
+              <stop offset="95%" stop-color="#ff79da" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M14.75 1A5.24 5.24 0 0 0 10 4 5.24 5.24 0 0 0 0 6.25C0 11.75 10 19 10 19s10-7.25 10-12.75A5.25 5.25 0 0 0 14.75 1z"
+          />
+        </svg>
+      </header>
+      <div class="resto">
+        <div class="plates">
+          <section class="resto__catego">
             <h2>entrées</h2>
 
             <article class="plate">
@@ -170,12 +202,11 @@
               </div>
             </article>
           </section>
-        </section>
-
-        <a href="#restaurants" class="button--purple" role="button">
+        </div>
+        <button class="button--purple" role="button">
           Commander
-        </a>
-      </section>
+        </button>
+      </div>
     </main>
 
     <footer class="footer">
