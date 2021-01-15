@@ -477,57 +477,41 @@ button {
   -webkit-text-stroke-color: transparent;
 }
 
-.button--purple {
+.btn--purple {
   display: block;
   color: #f6f6f6;
-  background: linear-gradient(350deg, #9356dc, #ff79da);
-  border-radius: 1.6em;
-  box-shadow: 5px 5px 6px #d0d0d0;
-  width: 15em;
-  padding: 1em 1em;
-  margin: 3em auto;
   font-size: 1em;
   font-family: "Roboto", "sans-serif";
   font-weight: 500;
-  text-align: center;
-  transition: all 400ms ease-in-out;
+  width: 15em;
+  height: 3.3333333333em;
+  margin: 3em auto;
+  background: linear-gradient(350deg, #9356dc 15%, #ff79da 85%);
+  border-radius: 7.5em;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: opacity 400ms ease-in-out;
 }
-.button--purple:hover {
+.btn--purple:hover {
   opacity: 0.8;
-  box-shadow: 5px 5px 6px #aaaaaa;
 }
-.button--purple--menu {
-  margin-top: 2em;
+.btn--purple:hover::after {
+  opacity: 1;
 }
-
-.select {
-  display: flex;
-  flex-direction: row;
-  align-content: baseline;
-  padding: 1.75em;
-  background-color: white;
-  box-shadow: 0 5px 8px #e9e9e9;
-  border-radius: 1.25em;
-}
-.select__text {
-  margin-left: 1em;
-}
-.select__menu {
-  margin-bottom: 1em;
-  display: flex;
-  justify-content: space-between;
-}
-.select__menu p {
-  margin: 0;
-  font-weight: 300;
-  font-size: 0.95em;
-  padding: 0.75em;
-}
-
-.check {
-  background-color: #99e2d0;
-  color: #fff;
-  height: 3em;
+.btn--purple::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 7.5em;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+  transition: opacity 400ms ease-in-out;
 }
 
 .plate {
@@ -682,7 +666,7 @@ header .brand__arrow {
 }
 .footer i {
   width: 0.5em;
-  margin-right: 0.5em;
+  margin-right: 0.25em;
 }
 
 header,
@@ -825,23 +809,13 @@ header,
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .card__container {
-    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
-  }
-}
 @media only screen and (min-width: 1224px) {
   .card__container {
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
 
-  .function, .restos__container {
-    width: 100vh;
-    margin: auto;
-  }
-
   .function {
-    padding: 2em 0;
+    padding: 2em 1em;
   }
 
   .steps {
@@ -859,13 +833,20 @@ header,
     gap: 3em;
   }
 }
-@media only screen and (min-width: 1824px) {
+@media only screen and (min-width: 1450px) {
   body {
     height: 100vh;
   }
 
   .card__container {
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  }
+
+  .function,
+.restos,
+.resto__name,
+.plates {
+    padding: 1em 10%;
   }
 }
 .purle__heart {

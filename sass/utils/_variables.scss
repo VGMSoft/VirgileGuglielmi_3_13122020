@@ -4,4 +4,8 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $background-color: #f6f6f6;
 $color-white: #fff;
-$purple-gradient: linear-gradient(350deg, $color-primary, $color-secondary);
+$purple-gradient: linear-gradient(
+  350deg,
+  $color-primary 0%,
+  $color-secondary 85%
+);

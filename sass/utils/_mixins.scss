@@ -3,3 +3,17 @@
   -webkit-text-stroke-width: $stroke-width;
   -webkit-text-stroke-color: $stroke-color;
 }
+
+@mixin pseudo {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+@mixin purple-gradient($alpha) {
+  background: linear-gradient(350deg, rgba($color-primary, $alpha) 15%, rgba($color-secondary, $alpha) 85%);
+}

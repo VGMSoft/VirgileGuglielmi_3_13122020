@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
   <defs>
-  <linearGradient id="purple__gradient">
+  <linearGradient id="purple__gradient" gradientTransform="rotate(350)">
      <stop offset="5%"  stop-color="#9356dc"/>
      <stop offset="95%" stop-color="#ff79da"/>
   </linearGradient>
