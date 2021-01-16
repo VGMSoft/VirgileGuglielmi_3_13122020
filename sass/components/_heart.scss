@@ -1,11 +1,27 @@
-.purle__heart {
-  width:1.7em;
-  height:1.7em;
-  stroke: #000;
-  stroke-width:.5pt;
-  fill: transparent;
+.like {
+  &__icon {
+    transition-duration: 500ms;
+    @include pseudo;
+    mix-blend-mode: lighten;
+    &--white {
+      background-color: #fff;
+    }
+    &--gray {
+      background-color: $background-color;
+    }
+  }
+  &::before {
+    opacity: 0;
+    transition: 500ms;
+    @include pseudo;
+    @include purple-gradient(1);
+  }
   &:hover {
-    fill: url(#purple__gradient);
-    stroke: transparent;
+    &::before {
+      opacity: 1;
+    }
+    .like--light {
+      opacity: 0;
+    }
   }
 }

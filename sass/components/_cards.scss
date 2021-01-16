@@ -12,10 +12,10 @@
       object-fit: cover;
       width: 100%;
       height: 180px;
-      &:hover {
+      /*&:hover {
         transform: scale(1.025);
         transition: transform 400ms ease-in-out;
-      }
+      }*/
     }
   }
   &__mask {
@@ -36,10 +36,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     background-color: $color-white;
-    padding: 0.75em;
+    padding: 0.7em;
     padding-right: 1.5em;
-
+    width: 100%;
     h3,
     p {
       margin: 0.25em;
@@ -50,13 +51,4 @@
     }
   }
 }
-.card__like {
-  font-size: 1.4em;
-}
 
-.fa-heart {
-  @include edit-icon(transparent, 1px, #000);
-  &:active {
-    @include edit-icon($color-primary, 0px, transparent);
-  }
-}

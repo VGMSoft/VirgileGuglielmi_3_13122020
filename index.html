@@ -18,18 +18,18 @@
     <link rel="icon" href="./public/img/favicon/favicon-32x32.png" />
     <link rel="icon" href="./public/img/favicon/favicon.ico" />
 
-    <!--local_CSS_Files-->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./public/css/prefixed/styles.css"
-    />
     <!--FontAwesome-->
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
+    />
+    <!--local_CSS_Files-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./public/css/prefixed/styles.css"
     />
   </head>
 
@@ -55,7 +55,7 @@
         <p class="reserv__subtitle">
           Découvrez des restaurants d'exception, selectionnés par nos soins.
         </p>
-        <button href="#restos" class="btn--purple" role="button">
+        <button class="btn--purple" role="button">
           Explorez nos restaurants
         </button>
       </section>
@@ -79,7 +79,6 @@
         <div class="restos__container">
           <h2>Restaurants</h2>
           <div class="card__container">
-
             <a href="./restaurants/palettedugout.html" class="card">
               <div class="card__body">
                 <img
@@ -93,7 +92,12 @@
                   <h3>La palette du go&ucirc;t</h3>
                   <p>Ménilmontant</p>
                 </div>
-                <i class="card__like fas fa-heart"></i>
+                <div class="fa-stack like">
+                  <i
+                    class="fa-stack-2x fa-heart fal like__icon like__icon--white like--light"
+                  ></i>
+                  <i class="fa-stack-2x fa-heart fas like__icon like__icon--white"></i>
+                </div>
               </div>
             </a>
 
@@ -110,7 +114,12 @@
                   <h3>La note enchantée</h3>
                   <p>Charonne</p>
                 </div>
-                <i class="card__like fas fa-heart"></i>
+                <div class="fa-stack like">
+                  <i
+                    class="fa-stack-2x fa-heart fal like__icon like__icon--white like--light"
+                  ></i>
+                  <i class="fa-stack-2x fa-heart fas like__icon like__icon--white"></i>
+                </div>
               </div>
             </a>
 
@@ -126,7 +135,12 @@
                   <h3>&Agrave; la fran&ccedil;aise</h3>
                   <p>Cité Rouge</p>
                 </div>
-                <i class="card__like fas fa-heart"></i>
+                <div class="fa-stack like">
+                  <i
+                    class="fa-stack-2x fa-heart fal like__icon like__icon--white like--light"
+                  ></i>
+                  <i class="fa-stack-2x fa-heart fas like__icon like__icon--white"></i>
+                </div>
               </div>
             </a>
 
@@ -142,7 +156,12 @@
                   <h3>Le délice des sens</h3>
                   <p>Folie-Méricourt</p>
                 </div>
-                <i class="card__like fas fa-heart"></i>
+                <div class="fa-stack like">
+                  <i
+                    class="fa-stack-2x fa-heart fal like__icon like__icon--white like--light"
+                  ></i>
+                  <i class="fa-stack-2x fa-heart fas like__icon like__icon--white"></i>
+                </div>
               </div>
             </a>
           </div>

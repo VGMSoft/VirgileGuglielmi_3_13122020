@@ -1,8 +1,8 @@
-@mixin edit-icon($color, $stroke-width, $stroke-color) {
+/*@mixin edit-icon($color, $stroke-width, $stroke-color) {
   color: $color;
   -webkit-text-stroke-width: $stroke-width;
   -webkit-text-stroke-color: $stroke-color;
-}
+}*/
 
 @mixin pseudo {
   content: "";
@@ -11,9 +11,23 @@
   right: 0;
   bottom: 0;
   left: 0;
-
 }
 
 @mixin purple-gradient($alpha) {
-  background: linear-gradient(350deg, rgba($color-primary, $alpha) 15%, rgba($color-secondary, $alpha) 85%);
+  background: linear-gradient(
+    350deg,
+    rgba($color-primary, $alpha) 15%,
+    rgba($color-secondary, $alpha) 85%
+  );
+}
+
+@mixin btn-size($size) {
+  height: $size;
+  width: $size;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

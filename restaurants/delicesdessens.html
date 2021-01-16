@@ -52,7 +52,12 @@
     <main>
       <header class="resto__name">
         <h1>Le délice des sens</h1>
-        <i class="fas fa-heart"></i>
+        <div class="fa-stack like">
+          <i
+            class="fa-stack-2x fa-heart fal like__icon like__icon--gray like--light"
+          ></i>
+          <i class="fa-stack-2x fa-heart fas like__icon like__icon--gray"></i>
+        </div>
       </header>
       <div class="resto">
         <div class="plates">
@@ -167,9 +172,7 @@
             </article>
           </section>
         </div>
-        <button class="btn--purple" role="button">
-          Commander
-        </button>
+        <button class="btn--purple" role="button">Commander</button>
       </div>
     </main>
 
