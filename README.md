@@ -17,14 +17,55 @@
 
 > Using a CSS preprocessor (i.e SASS / SCSS) & Using CSS Animations / @keyframes
 
+>Technologies
+  ● Le développement en CSS, sans JavaScript.
+  ● Aucun framework utilisé, SASS .
+  ● Aucun CSS inline.
+
+>Compatibilité
+La cible étant les personnes connectées et pressées, le site est développé en utilisant l’approche mobile-first.
+  ● L’ensemble du site est responsive sur mobile, tablette et desktop.
+  ● Les pages remplissent les conditions de la validation W3C en HTML et CSS.
+  ● Le site est compatible avec les dernières versions desktop de Chrome et Firefox.
+
+>Contenu des pages
+  Page d’accueil (x1)
+    ● Affichage de la localisation des restaurants. À terme il sera possible de choisir sa localisation pour trouver des restaurants proches d’un certain lieu.
+    ● Une courte présentation de l’entreprise.
+    ● Une section contenant les 4 menus sous forme cartes. Au clic sur la carte,
+    l’utilisateur est redirigé vers la page du menu.
+  Pages de menu (x4)
+    ● 4 pages contenant chacune le menu d’un restaurant. Footer
+    ● Le footer est identique sur toutes les pages.
+    ● Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.
+  Header
+    ● Le header est présent sur toutes les pages.
+    ● Sur la page d’accueil, il contient le logo du site.
+    ● Sur les pages de menu, il contient en plus un bouton de retour vers la page d’accueil
+
+>Effets graphiques et animations
+    Les effets accessibles au clic ou au survol sont visibles sur la maquette. Ils utilisent les animations ou transitions CSS, pas
+    de JavaScript ni de librairie.
+  
+  Boutons
+    ● Au survol, la couleur de fond des boutons principaux s’éclaircit légèrement et l’ombre portée est plus visible.
+    ● À terme, les visiteurs pourront sauvegarder leurs menus préférés. Pour ça, un bouton "J’aime" en forme de cœur est présent sur la maquette. Au clic, il se remplir progressivement. Pour cette première version, l’effet apparaît au survol sur desktop au lieu du clic.
+
+  Page d’accueil
+    ● Quand l’application aura plus de menus, un “loading spinner” sera nécessaire. Sur cette maquette, nous en proposons un aperçu. Il apparaît pendant 1 à 3 secondes quand on arrive sur la page d'accueil, couvre l'intégralité de l'écran, et utilise les animations CSS (pas de librairie).
+
+  Pages de menu
+    ● À l’arrivée sur la page, les plats apparaissent progressivement avec un léger décalage dans le temps.
+    ● Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant dessus. Cela fait apparaître une petite coche à droite du plat. Cette coche coulisse de la droite vers la gauche. Pour cette première version, l’effet peut apparaître au survol sur desktop au lieu du clic. Si l’intitulé du plat est trop long, il est rogné avec des points de suspension. Un exemple de l’effet attendu est fourni.
+
 ### 🏠 [Homepage](https://github.com/VGMSoft/VirgileGuglielmi_3_13122020/)
 
 ### ✨ [Demo](https://vgmsoft.github.io/VirgileGuglielmi_3_13122020/)
 
-## Install
+## Fork
 
 ```sh
-npm install
+https://github.com/VGMSoft/VirgileGuglielmi_3_13122020.git
 ```
 
 ## Usage
@@ -32,7 +73,7 @@ npm install
 ```sh
 sass --watch ./sass/main.scss:./public/css/styles.css
 postcss --watch ./public/css/styles.css --use autoprefixer -d ./public/css/prefixed/
-npm run sass & npm run prefix
+
 ```
 
 ## Author
