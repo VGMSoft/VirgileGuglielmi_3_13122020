@@ -27,6 +27,12 @@
   align-items: center;
 }
 
-@mixin gray-scale($lightness){
+@mixin gray-scale($lightness) {
   background-color: darken($background-color, $lightness);
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

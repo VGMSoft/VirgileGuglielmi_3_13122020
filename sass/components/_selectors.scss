@@ -1,51 +1,41 @@
 .plate {
-  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  max-width: calc(100% -2em);
   height: 4.5em;
   margin-bottom: 1em;
+  padding: 1em;
   border-radius: 1.25em;
   overflow: hidden;
   box-shadow: 5px 5px 5px darken($background-color, 5%);
   background-color: lighten($background-color, 5%);
-  cursor: pointer;
   &__info {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1em;
-    width: 80%;
-    
+    display: block;
+    @include ellipsis;
+    cursor: pointer;
     h3 {
       font-size: 1.2em;
+      @include ellipsis;
     }
     p {
       font-weight: 200;
-    }
-    h3,
-    p {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
+      @include ellipsis;
     }
   }
-
-  &__slider {
-    display: flex;
-    position: absolute;
-    right: -4em;
-  }
-
   &__price {
     display: flex;
+    justify-content: flex-end;
     align-items: flex-end;
     font-weight: 500;
-    padding: 1em;
+    margin-left: 1em;
   }
   &__check {
-    position: absolute;
-    right: -4em;
+    margin-top: -1em;
+    margin-right: -5em;
+    margin-left: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +45,6 @@
     height: 4.5em;
     width: 4em;
     transition: all 400ms ease-in-out;
-
     i {
       display: block;
       font-size: 1.25em;
@@ -65,10 +54,10 @@
     }
   }
   &:hover {
-    & + .plate__slider {
-      right: 5em;
+    & > .plate__check {
+      margin-right: -1em;
     }
-    & + .plate__slider > i {
+    & > .plate__check > i {
       transform: rotate(0deg);
     }
   }

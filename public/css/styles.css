@@ -510,51 +510,50 @@ button {
 }
 
 .plate {
-  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  max-width: calc(100% -2em);
   height: 4.5em;
   margin-bottom: 1em;
+  padding: 1em;
   border-radius: 1.25em;
   overflow: hidden;
   box-shadow: 5px 5px 5px #e9e9e9;
   background-color: white;
-  cursor: pointer;
 }
 .plate__info {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1em;
-  width: 80%;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
 }
 .plate__info h3 {
   font-size: 1.2em;
-}
-.plate__info p {
-  font-weight: 200;
-}
-.plate__info h3,
-.plate__info p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.plate__slider {
-  display: flex;
-  position: absolute;
-  right: -4em;
+.plate__info p {
+  font-weight: 200;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .plate__price {
   display: flex;
+  justify-content: flex-end;
   align-items: flex-end;
   font-weight: 500;
-  padding: 1em;
+  margin-left: 1em;
 }
 .plate__check {
-  position: absolute;
-  right: -4em;
+  margin-top: -1em;
+  margin-right: -5em;
+  margin-left: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -572,10 +571,10 @@ button {
   transition-delay: 100ms;
   transform: rotate(-180deg);
 }
-.plate:hover + .plate__slider {
-  right: 5em;
+.plate:hover > .plate__check {
+  margin-right: -1em;
 }
-.plate:hover + .plate__slider > i {
+.plate:hover > .plate__check > i {
   transform: rotate(0deg);
 }
 
@@ -703,7 +702,7 @@ header .brand__arrow {
   margin-right: 0.25em;
 }
 
-header,
+.header,
 .local,
 .reserv {
   text-align: center;
@@ -860,7 +859,7 @@ header,
     width: 30%;
   }
 
-  .plates {
+  .menu {
     display: grid;
     grid-template: 1fr/repeat(3, 1fr);
     gap: 3em;
@@ -878,7 +877,7 @@ header,
   .function,
 .restos,
 .resto__name,
-.plates {
+.menu {
     padding: 1em 10%;
   }
 }
