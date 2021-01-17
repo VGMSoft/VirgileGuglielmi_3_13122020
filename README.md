@@ -35,8 +35,7 @@ La cible étant les personnes connectées et pressées, le site est développé 
     ● Une section contenant les 4 menus sous forme cartes. Au clic sur la carte,
     l’utilisateur est redirigé vers la page du menu.<br/>
   Pages de menu (x4)<br/>
-    ● 4 pages contenant chacune le menu d’un restaurant.<br/>
-    
+    ● 4 pages contenant chacune le menu d’un restaurant.<br/>  
   Footer<br/>
     ● Le footer est identique sur toutes les pages.<br/>
     ● Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.<br/>
@@ -47,14 +46,11 @@ La cible étant les personnes connectées et pressées, le site est développé 
 
 >Effets graphiques et animations<br/>
     Les effets accessibles au clic ou au survol sont visibles sur la maquette. Ils utilisent les animations ou transitions CSS, pas de JavaScript ni de librairie.<br/>
-  
   Boutons<br/>
     ● Au survol, la couleur de fond des boutons principaux s’éclaircit légèrement et l’ombre portée est plus visible.<br/>
     ● À terme, les visiteurs pourront sauvegarder leurs menus préférés. Pour ça, un bouton "J’aime" en forme de cœur est présent sur la maquette. Au clic, il se remplir progressivement. Pour cette première version, l’effet apparaît au survol sur desktop au lieu du clic.<br/>
-
   Page d’accueil<br/>
     ● Quand l’application aura plus de menus, un “loading spinner” sera nécessaire. Sur cette maquette, nous en proposons un aperçu. Il apparaît pendant 1 à 3 secondes quand on arrive sur la page d'accueil, couvre l'intégralité de l'écran, et utilise les animations CSS (pas de librairie).<br/>
-
   Pages de menu<br/>
     ● À l’arrivée sur la page, les plats apparaissent progressivement avec un léger décalage dans le temps.<br/>
     ● Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant dessus. Cela fait apparaître une petite coche à droite du plat. Cette coche coulisse de la droite vers la gauche. Pour cette première version, l’effet peut apparaître au survol sur desktop au lieu du clic. Si l’intitulé du plat est trop long, il est rogné avec des points de suspension. Un exemple de l’effet attendu est fourni.
