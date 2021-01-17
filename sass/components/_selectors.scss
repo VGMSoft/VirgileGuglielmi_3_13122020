@@ -9,13 +9,14 @@
   overflow: hidden;
   box-shadow: 5px 5px 5px darken($background-color, 5%);
   background-color: lighten($background-color, 5%);
+  cursor: pointer;
   &__info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 1em;
     width: 80%;
-    cursor: pointer;
+    
     h3 {
       font-size: 1.2em;
     }
@@ -28,6 +29,12 @@
       white-space: nowrap;
       overflow: hidden;
     }
+  }
+
+  &__slider {
+    display: flex;
+    position: absolute;
+    right: -4em;
   }
 
   &__price {
@@ -58,10 +65,10 @@
     }
   }
   &:hover {
-    & > .plate__check {
-      right: 0em;
+    & + .plate__slider {
+      right: 5em;
     }
-    & > .plate__check > i {
+    & + .plate__slider > i {
       transform: rotate(0deg);
     }
   }

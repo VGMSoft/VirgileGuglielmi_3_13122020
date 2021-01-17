@@ -5,19 +5,16 @@ display:block;
   font-size: 1em;
   font-family: "Roboto", "sans-serif";
   font-weight: 500;
-
   width: $btn-size;
   height: $btn-size/4.5;
   margin: 3em auto;
-
   @include purple-gradient(1);
   border-radius: $btn-size/2;
-  box-shadow: 0 5px 5px rgba(#000, 0.3);
-
+  box-shadow: 0 5px 3px rgba(#000, 0.3);
   cursor: pointer;
   position: relative;
   z-index: 1;
-  transition: opacity 400ms ease-in-out;
+  transition: opacity 600ms ease-in-out;
   &:hover {
     opacity: 0.8;
     &::after {
