@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Ohmyfood 👋</h1>
+<h1 align="center">Welcome to Ohmyfood</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/VGMSoft/VirgileGuglielmi_3_13122020#readme" target="_blank">
@@ -17,7 +17,7 @@
 
 > Using a CSS preprocessor (i.e SASS / SCSS) & Using CSS Animations / @keyframes
 
-### 🏠 [Homepage](https://vgmsoft.github.io/VirgileGuglielmi_3_13122020/)
+### 🏠 [Homepage](https://github.com/VGMSoft/VirgileGuglielmi_3_13122020/)
 
 ### ✨ [Demo](https://vgmsoft.github.io/VirgileGuglielmi_3_13122020/)
 
@@ -58,4 +58,4 @@ Copyright © 2021 [Virgile Guglielmi](https://github.com/VGMSoft).<br />
 This project is [ISC](https://github.com/VGMSoft/VirgileGuglielmi_3_13122020/blob/master/LICENSE) licensed.
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+_This README was generated with by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
