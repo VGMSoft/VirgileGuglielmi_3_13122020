@@ -60,10 +60,11 @@
   background-color: #fff;
   padding: 2em 1em;
   @include desktop-only {
-    padding: 2em 1em;
+    padding: 2em 15%;
   }
   @include widescreen-only {
-    padding: 1em 10%;
+    min-width: 70%;
+    padding: 2em 17.5%;
   }
   h2 {
     margin-bottom: 1em;
@@ -74,8 +75,11 @@
 .restos {
   background-color: $background-color;
   position: relative;
+  @include desktop-only {
+    padding: 2em 15%;
+  }
   @include widescreen-only {
-    padding: 1em 10%;
+    padding: 1em 17.5%;
   }
   h2 {
     margin-top: 1.5em;
@@ -110,8 +114,8 @@
     margin-top: -3em;
     position: relative;
     @include widescreen-only {
-    padding: 1em 10%;
-  }
+      padding: 1em 15%;
+    }
     h1 {
       font-family: "Shrikhand", cursive;
       font-size: 1.5em;
@@ -121,13 +125,13 @@
   .menu {
     @include desktop-only {
       display: grid;
-      grid-template: 1fr / repeat(3, 1fr);
+      grid-template: 1fr / repeat(3, 30%);
       gap: 3em;
     }
     @include widescreen-only {
-    padding: 1em 10%;
-  }s
-    &__catego {
+      padding: 1em 15%;
+    }
+    s &__catego {
       margin-bottom: 2em;
     }
   }

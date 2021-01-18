@@ -354,6 +354,12 @@ template {
   font-family: "Roboto", "sans-serif";
 }
 
+@media screen and (min-width: 1440px) {
+  body {
+    height: 50vh;
+  }
+}
+
 body,
 .reserv,
 .function,
@@ -480,7 +486,12 @@ button {
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1280px) {
+  .card__container {
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1440px) {
   .card__container {
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
@@ -595,7 +606,7 @@ button {
 .steps {
   counter-reset: compteListe;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1280px) {
   .steps {
     display: flex;
     flex-direction: row;
@@ -616,7 +627,7 @@ button {
   font-weight: 500;
   background-color: #f6f6f6;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1280px) {
   .step {
     width: 30%;
   }
@@ -793,9 +804,15 @@ header .brand__arrow {
   background-color: #fff;
   padding: 2em 1em;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1280px) {
   .function {
-    padding: 2em 1em;
+    padding: 2em 15%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .function {
+    min-width: 70%;
+    padding: 2em 17.5%;
   }
 }
 .function h2 {
@@ -806,6 +823,16 @@ header .brand__arrow {
 .restos {
   background-color: #f6f6f6;
   position: relative;
+}
+@media screen and (min-width: 1280px) {
+  .restos {
+    padding: 2em 15%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .restos {
+    padding: 1em 17.5%;
+  }
 }
 .restos h2 {
   margin-top: 1.5em;
@@ -840,18 +867,28 @@ header .brand__arrow {
   margin-top: -3em;
   position: relative;
 }
+@media screen and (min-width: 1440px) {
+  .resto__name {
+    padding: 1em 15%;
+  }
+}
 .resto__name h1 {
   font-family: "Shrikhand", cursive;
   font-size: 1.5em;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1280px) {
   .resto .menu {
     display: grid;
-    grid-template: 1fr/repeat(3, 1fr);
+    grid-template: 1fr/repeat(3, 30%);
     gap: 3em;
   }
 }
-.resto .menu__catego {
+@media screen and (min-width: 1440px) {
+  .resto .menu {
+    padding: 1em 15%;
+  }
+}
+s .resto .menu__catego {
   margin-bottom: 2em;
 }
 .resto h2 {
