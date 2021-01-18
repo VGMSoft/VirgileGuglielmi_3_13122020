@@ -344,11 +344,7 @@ template {
   display: none;
 }
 
-/*@mixin btn-size($size) {
-  width: $size;
-  height: $size/4.5;
-  border-radius: size/2;
-}*/
+/*-------------- Own CSS -------------------*/
 * {
   box-sizing: border-box;
   font-family: "Roboto", "sans-serif";
@@ -849,7 +845,6 @@ header .brand__arrow {
   position: relative;
 }
 .resto__pic {
-  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 40vh;

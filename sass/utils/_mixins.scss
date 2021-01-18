@@ -15,11 +15,6 @@
   );
 }
 
-/*@mixin btn-size($size) {
-  width: $size;
-  height: $size/4.5;
-  border-radius: size/2;
-}*/
 
 @mixin flex-center {
   display: flex;
@@ -36,6 +31,7 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
 //responsive
 @mixin mobile-only {
   @media screen and (min-width: map-get($breakpoints, mobile)) and (orientation: landscape) {
