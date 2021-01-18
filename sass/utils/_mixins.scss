@@ -36,3 +36,27 @@
   white-space: nowrap;
   overflow: hidden;
 }
+//responsive
+@mixin mobile-only {
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-device-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin widescreen-only {
+  @media screen and (min-width: map-get($breakpoints, widescreen)) {
+    @content;
+  }
+}

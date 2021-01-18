@@ -1,5 +1,10 @@
 .steps {
   counter-reset: compteListe;
+  @include desktop-only {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .step {
   display: flex;
@@ -13,6 +18,9 @@
   border-radius: 1.25em;
   font-weight: 500;
   background-color: $background-color;
+  @include desktop-only {
+    width: 30%;
+  }
   i::before {
     color: darken($background-color, 45%);
     font-size: 1.1em;

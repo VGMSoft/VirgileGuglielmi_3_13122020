@@ -36,7 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     background-color: $color-white;
     padding: 0.7em;
     padding-right: 1.5em;
@@ -50,5 +50,17 @@
       font-weight: 300;
     }
   }
+  &__container {
+    display: grid;
+    gap: 1em;
+    @include tablet-only {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    @include desktop-only {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    @include widescreen-only {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+  }
 }
-

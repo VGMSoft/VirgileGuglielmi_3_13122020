@@ -3,6 +3,11 @@
   box-sizing: border-box;
   font-family: "Roboto", "sans-serif";
 }
+body{
+  @include widescreen-only {
+    height: 50vh;
+  }
+}
 
 body,
 .reserv,

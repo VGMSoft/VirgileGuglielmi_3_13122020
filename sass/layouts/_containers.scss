@@ -45,6 +45,9 @@
     font-weight: 600;
     width: 10em;
     margin: 1em auto 0.5em auto;
+    @include mobile-only {
+      width: auto;
+    }
   }
   &__subtitle {
     font-weight: 300;
@@ -56,6 +59,12 @@
 .function {
   background-color: #fff;
   padding: 2em 1em;
+  @include desktop-only {
+    padding: 2em 1em;
+  }
+  @include widescreen-only {
+    padding: 1em 10%;
+  }
   h2 {
     margin-bottom: 1em;
     margin-top: 0.5em;
@@ -65,6 +74,9 @@
 .restos {
   background-color: $background-color;
   position: relative;
+  @include widescreen-only {
+    padding: 1em 10%;
+  }
   h2 {
     margin-top: 1.5em;
     margin-bottom: 1em;
@@ -97,6 +109,9 @@
     z-index: 2;
     margin-top: -3em;
     position: relative;
+    @include widescreen-only {
+    padding: 1em 10%;
+  }
     h1 {
       font-family: "Shrikhand", cursive;
       font-size: 1.5em;
@@ -104,8 +119,14 @@
   }
 
   .menu {
-    //display: grid;
-    //grid-template:repeat(3, 1fr);
+    @include desktop-only {
+      display: grid;
+      grid-template: 1fr / repeat(3, 1fr);
+      gap: 3em;
+    }
+    @include widescreen-only {
+    padding: 1em 10%;
+  }s
     &__catego {
       margin-bottom: 2em;
     }
@@ -125,9 +146,4 @@
       margin-bottom: 0.5em;
     }
   }
-}
-
-.card__container {
-  display: grid;
-  gap: 1em;
 }
