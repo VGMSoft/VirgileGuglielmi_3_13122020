@@ -125,7 +125,7 @@
   .menu {
     @include desktop-only {
       display: grid;
-      grid-template: 1fr / repeat(3, 30%);
+      grid-template: 1fr / repeat(3, 30.75%);
       gap: 3em;
     }
     @include widescreen-only {
