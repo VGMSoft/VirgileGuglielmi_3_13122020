@@ -5,51 +5,7 @@
   overflow: hidden;
   box-shadow: 5px 5px 6px darken($background-color, 5%);
   border-radius: 1em;
-  &__body {
-    position: relative;
-    block-size: 180px;
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 180px;
-      &:hover {
-        transform: scale(1.02);
-        transition: transform 500ms ease-in-out;
-      }
-    }
-  }
-  &__mask {
-    color: darken($color-tertiary, 37%);
-    background-color: $color-tertiary;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    padding: 0.5em;
-    height: 2em;
-    width: 5.5em;
-    text-align: center;
-    font-weight: 500;
-    border-radius: 2px;
-    font-size: 0.9em;
-  }
-  &__footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    background-color: $color-white;
-    padding: 0.7em;
-    padding-right: 1.5em;
-    width: 100%;
-    h3,
-    p {
-      margin: 0.25em;
-      font-size: 1.1em;
-    }
-    p {
-      font-weight: 300;
-    }
-  }
   &__container {
     display: grid;
     gap: 1em;
@@ -61,6 +17,53 @@
     }
     @include widescreen-only {
       grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+  }
+
+  &__body {
+    position: relative;
+    block-size: 180px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 180px;
+      transform: scale(1.02);
+      &:hover {
+        transition: transform 500ms ease-in-out;
+      }
+    }
+  }
+
+  &__mask {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: darken($color-tertiary, 37%);
+    background-color: $color-tertiary;
+    border-radius: 2px;
+    padding: 0.5em;
+    height: 2em;
+    width: 5.5em;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9em;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-white;
+    padding: 0.7em;
+    padding-right: 1.5em;
+    width: 100%;
+    h3,
+    p {
+      margin: 0.25em;
+      font-size: 1.1em;
+    }
+    p {
+      font-weight: 300;
     }
   }
 }

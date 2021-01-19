@@ -42,32 +42,6 @@ h1 {
   margin: 0.67em 0;
 }
 
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
-
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -79,67 +53,6 @@ a {
   /* P */
   color: inherit;
   /* P */
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
 }
 
 /* Embedded content
@@ -158,10 +71,7 @@ img {
  * 2. Remove the margin in Firefox and Safari.
  */
 button,
-input,
-optgroup,
-select,
-textarea {
+input {
   font-size: 100%;
   /* 1 */
   line-height: 1.15;
@@ -184,8 +94,7 @@ input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-button,
-select {
+button {
   /* 1 */
   text-transform: none;
 }
@@ -222,68 +131,6 @@ button:-moz-focusring,
 }
 
 /**
- * Correct the padding in Firefox.
- */
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-  overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
@@ -310,38 +157,6 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */
-}
-
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
-  display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item;
-}
-
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template {
-  display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-[hidden] {
-  display: none;
 }
 
 /*-------------------------- Own CSS --------------------------*/
@@ -390,35 +205,44 @@ button {
   background: #000;
 }
 
-.number {
-  color: #f6f6f6;
-  background-color: #9356dc;
+.loading-spinner {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: vanish 2s ease-in-out 5s;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 10em;
+  height: 15em;
+  filter: blur(1px);
+}
+.loader__icon {
+  color: #9356dc;
+  text-transform: uppercase;
+  font-family: Shrikhand, cursive;
+  font-weight: bold;
+  font-size: 5em;
+  animation: bounce 1s linear infinite;
+  position: relative;
+  z-index: 1;
+}
+.loader__shadow {
+  width: 5em;
+  height: 2em;
+  background-color: #ccc;
   border-radius: 50%;
-  width: 1.5em;
-  height: 1.5em;
-  margin: 0;
-  position: relative;
-  top: 3em;
-}
-
-.new {
-  display: block;
-  background-color: #99e2d0;
-  color: #278870;
-  margin: 0;
-  padding: 0.5em;
-  width: 4em;
-  height: 1em;
-  position: relative;
-  top: 1em;
-  left: 15.5em;
-}
-
-.filter {
-  fill: #fff;
+  box-shadow: 0 0 1em #aaaaaa;
+  animation: shadow 1s ease-in-out infinite;
 }
 
 .card {
@@ -428,50 +252,6 @@ button {
   overflow: hidden;
   box-shadow: 5px 5px 6px #e9e9e9;
   border-radius: 1em;
-}
-.card__body {
-  position: relative;
-  block-size: 180px;
-}
-.card__body img {
-  object-fit: cover;
-  width: 100%;
-  height: 180px;
-}
-.card__body img:hover {
-  transform: scale(1.02);
-  transition: transform 500ms ease-in-out;
-}
-.card__mask {
-  color: #2a947a;
-  background-color: #99e2d0;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  padding: 0.5em;
-  height: 2em;
-  width: 5.5em;
-  text-align: center;
-  font-weight: 500;
-  border-radius: 2px;
-  font-size: 0.9em;
-}
-.card__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  padding: 0.7em;
-  padding-right: 1.5em;
-  width: 100%;
-}
-.card__footer h3,
-.card__footer p {
-  margin: 0.25em;
-  font-size: 1.1em;
-}
-.card__footer p {
-  font-weight: 300;
 }
 .card__container {
   display: grid;
@@ -491,6 +271,50 @@ button {
   .card__container {
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
+}
+.card__body {
+  position: relative;
+  block-size: 180px;
+}
+.card__body img {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  transform: scale(1.02);
+}
+.card__body img:hover {
+  transition: transform 500ms ease-in-out;
+}
+.card__mask {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #2a947a;
+  background-color: #99e2d0;
+  border-radius: 2px;
+  padding: 0.5em;
+  height: 2em;
+  width: 5.5em;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.7em;
+  padding-right: 1.5em;
+  width: 100%;
+}
+.card__footer h3,
+.card__footer p {
+  margin: 0.25em;
+  font-size: 1.1em;
+}
+.card__footer p {
+  font-weight: 300;
 }
 
 .btn--purple {
@@ -533,7 +357,6 @@ button {
 .plate {
   display: flex;
   flex-direction: row;
-  max-width: calc(100% -2em);
   height: 4.5em;
   margin-bottom: 1em;
   padding: 1em;
@@ -546,7 +369,6 @@ button {
   flex: 1;
   display: flex;
   flex-direction: column;
-  display: block;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -767,7 +589,7 @@ header .brand__arrow {
   background-color: #eeeeee;
   border: none;
   font-weight: 500;
-  width: 7.5em;
+  width: 8em;
 }
 .local i {
   margin-right: 0.75em;
@@ -871,27 +693,58 @@ header .brand__arrow {
   font-family: "Shrikhand", cursive;
   font-size: 1.5em;
 }
+
 @media screen and (min-width: 1280px) {
-  .resto .menu {
+  .menu {
     display: grid;
     grid-template: 1fr/repeat(3, 30.75%);
     gap: 3em;
   }
 }
 @media screen and (min-width: 1440px) {
-  .resto .menu {
+  .menu {
     padding: 1em 15%;
   }
 }
-s .resto .menu__catego {
+.menu__catego {
   margin-bottom: 2em;
 }
-.resto h2 {
+.menu__catego .delay1 {
+  animation: menu-appear 1s ease-in-out 100ms;
+}
+.menu__catego .delay2 {
+  animation: menu-appear 1s ease-in-out 200ms;
+}
+.menu__catego .delay3 {
+  animation: menu-appear 1s ease-in-out 300ms;
+}
+.menu__catego .delay4 {
+  animation: menu-appear 1s ease-in-out 400ms;
+}
+.menu__catego .delay5 {
+  animation: menu-appear 1s ease-in-out 500ms;
+}
+.menu__catego .delay6 {
+  animation: menu-appear 1s ease-in-out 600ms;
+}
+.menu__catego .delay7 {
+  animation: menu-appear 1s ease-in-out 700ms;
+}
+.menu__catego .delay8 {
+  animation: menu-appear 1s ease-in-out 800ms;
+}
+.menu__catego .delay9 {
+  animation: menu-appear 1s ease-in-out 900ms;
+}
+.menu__catego .delay10 {
+  animation: menu-appear 1s ease-in-out 1000ms;
+}
+.menu__catego h2 {
   text-transform: uppercase;
   font-size: 1em;
   font-weight: 300;
 }
-.resto h2::after {
+.menu__catego h2::after {
   content: "";
   display: block;
   background-color: #99e2d0;
@@ -899,147 +752,6 @@ s .resto .menu__catego {
   height: 2.5px;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
-}
-
-.loading-spinner {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  animation: vanish 2s ease-in-out 5s;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 10em;
-  height: 15em;
-  filter: blur(1px);
-}
-.logo__icon {
-  color: #9356dc;
-  text-transform: uppercase;
-  font-family: Shrikhand, cursive;
-  font-weight: bold;
-  font-size: 5em;
-  animation: bounce 1s linear infinite;
-  position: relative;
-  z-index: 1;
-}
-.logo__shadow {
-  width: 5em;
-  height: 2em;
-  background-color: #ccc;
-  border-radius: 50%;
-  box-shadow: 0 0 1em #aaaaaa;
-  animation: shadow 1s ease-in-out infinite;
-}
-
-/*--------------------------------------------------*/
-@keyframes vanish {
-  0% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(-200vh);
-    opacity: 0.4;
-    display: none;
-  }
-}
-@keyframes shadow {
-  0% {
-    transform: scaleX(1);
-    opacity: 0.5;
-  }
-  10% {
-    transform: scaleX(0.9);
-    opacity: 0.6;
-  }
-  20% {
-    transform: scaleX(0.8);
-    opacity: 0.7;
-  }
-  30% {
-    transform: scaleX(0.7);
-    opacity: 0.8;
-  }
-  40% {
-    transform: scaleX(0.5);
-    opacity: 0.9;
-  }
-  45% {
-    transform: scale(0.5, 0.7);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(0.3, 0.5);
-    opacity: 0.4;
-  }
-  55% {
-    transform: scale(0.3, 0.5);
-    opacity: 0.5;
-  }
-  60% {
-    transform: scale(0.5, 0.7);
-    opacity: 0.9;
-  }
-  70% {
-    transform: scaleX(0.7);
-    opacity: 0.8;
-  }
-  80% {
-    transform: scaleX(0.8);
-    opacity: 0.7;
-  }
-  90% {
-    transform: scaleX(0.9);
-    opacity: 0.6;
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 0.5;
-  }
-}
-@keyframes bounce {
-  0% {
-    transform: translateY(-0.75em);
-  }
-  10% {
-    transform: translateY(-0.45em);
-  }
-  20% {
-    transform: translateY(-0.2em);
-  }
-  30% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(0.3em);
-  }
-  50% {
-    transform: translateY(0.5em);
-  }
-  60% {
-    transform: translateY(0.25em);
-  }
-  70% {
-    transform: translateY(0);
-  }
-  80% {
-    transform: translateY(-0.2em);
-  }
-  90% {
-    transform: translateY(-0.6em);
-  }
-  100% {
-    transform: translateY(-0.75em);
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
