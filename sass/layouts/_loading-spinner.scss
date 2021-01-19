@@ -24,10 +24,11 @@
   @include flex-center;
   width: 10em;
   height: 15em;
-  filter:blur(1px);
+  filter: blur(1px);
   &__icon {
     color: $color-primary;
     text-transform: uppercase;
+    font-family: Shrikhand, cursive;
     font-weight: bold;
     font-size: 5em;
     animation: bounce 1s linear infinite;

@@ -925,6 +925,7 @@ s .resto .menu__catego {
 .logo__icon {
   color: #9356dc;
   text-transform: uppercase;
+  font-family: Shrikhand, cursive;
   font-weight: bold;
   font-size: 5em;
   animation: bounce 1s linear infinite;
