@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand:wght@100;200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand:wght@100;200;300;400;500&display=swap");
 @import "./base/normalize";
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./base/base";
-@import "./components/components";
+@import "./layouts/loading-spinner";
 @import "./components/cards";
 @import "./components/buttons";
 @import "./components/selectors";
@@ -13,4 +13,3 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./layouts/containers";
-@import "./layouts/loading-spinner";

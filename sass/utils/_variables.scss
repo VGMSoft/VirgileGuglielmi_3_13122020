@@ -1,18 +1,22 @@
-//colors
+//paint
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $background-color: #f6f6f6;
 $color-white: #fff;
 
-//gradient
 $purple-gradient: linear-gradient(
   350deg,
   $color-primary 0%,
   $color-secondary 85%
 );
 
-//map
+//animation
+$transition-delay: 100ms;
+
+
+
+//responsive
 $breakpoints: (
   mobile: 321px,
   tablet: 768px,

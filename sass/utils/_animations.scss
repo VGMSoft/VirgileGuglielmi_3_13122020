@@ -47,7 +47,6 @@
   }
 }
 
-
 @keyframes shadow {
   0% {
     transform: scaleX(1);
@@ -103,64 +102,20 @@
   }
 }
 
-//menu-slide
-
+//menu
 @keyframes menu-appear {
   0% {
-    transform: 0;
-    opacity: ;
+    //transform: 0;
+    opacity: 0;
   }
-  10% {
-    transform: ;
-    opacity: ;
-  }
-  20% {
-    transform: ;
-    opacity: ;
-  }
-  30% {
-    transform: ;
-    opacity: ;
-  }
-  40% {
-    transform: ;
-    opacity: ;
-  }
-  45% {
-    transform: ;
-    opacity: ;
-  }
-  50% {
-    transform: ;
-    opacity: ;
-  }
-  55% {
-    transform: ;
-    opacity: ;
-  }
-  60% {
-    transform: ;
-    opacity: ;
-  }
-  70% {
-    transform: ;
-    opacity: ;
-  }
-  80% {
-    transform: ;
-    opacity: ;
-  }
-  90% {
-    transform: ;
-    opacity: ;
-  }
+
   100% {
-    transform: ;
+    //transform: 0;
     opacity: 1;
   }
 }
 
-@keyframes plate-appear {
+/*@keyframes plate-appear {
   0% {
     transform: 0;
     opacity: ;
@@ -213,6 +168,4 @@
     transform: ;
     opacity: 1;
   }
-}
-
-
+}*/

@@ -1,3 +1,23 @@
+//paint
+@mixin purple-gradient($alpha) {
+  background: linear-gradient(
+    350deg,
+    rgba($color-primary, $alpha) 15%,
+    rgba($color-secondary, $alpha) 85%
+  );
+}
+@mixin gray-scale($lightness) {
+  background-color: darken($background-color, $lightness);
+}
+
+//layout
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 @mixin pseudo {
   content: "";
   position: absolute;
@@ -7,30 +27,19 @@
   left: 0;
 }
 
-@mixin purple-gradient($alpha) {
-  background: linear-gradient(
-    350deg,
-    rgba($color-primary, $alpha) 15%,
-    rgba($color-secondary, $alpha) 85%
-  );
-}
-
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-@mixin gray-scale($lightness) {
-  background-color: darken($background-color, $lightness);
-}
-
 @mixin ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+//animation
+@mixin delay($delay) {
+  @for $delay from 1 through 10 {
+    .delay#{$delay} {
+      animation: menu-appear 1s ease-in-out (#{$delay * $transition-delay});
+    }
+  }
 }
 
 //responsive
