@@ -1,47 +1,6 @@
-.loading-spinner {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(#fff, 0.8);
-  animation: vanish 2s ease-in-out 5s;
-}
-
-.loader {
-  @include flex-center;
-  width: 10em;
-  height: 15em;
-  filter: blur(1px);
-
-  &__icon {
-    color: $color-primary;
-    text-transform: uppercase;
-    font-family: Shrikhand, cursive;
-    font-weight: bold;
-    font-size: 5em;
-    animation: bounce 1s linear infinite;
-    position: relative;
-    z-index: 1;
-  }
-  
-  &__shadow {
-    width: 5em;
-    height: 2em;
-    background-color: #ccc;
-    border-radius: 50%;
-    box-shadow: 0 0 1em rgba(#aaa, 1);
-    animation: shadow 1s ease-in-out infinite;
-  }
-}
-
-
 .loading{
   display:none;
 }
-/*
 
 $radius: 5em;
 $gray: #e5e5e5;
@@ -115,4 +74,4 @@ $gray-gradient: linear-gradient(
     animation-timing-function: ease-in-out;
   }
 }
-*/
+
