@@ -205,61 +205,9 @@ button {
   background: #000;
 }
 
-.loading-spinner {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  animation: vanish 2s ease-in-out 5s;
-}
-
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 10em;
-  height: 15em;
-  filter: blur(1px);
-}
-.loader__icon {
-  color: #9356dc;
-  text-transform: uppercase;
-  font-family: Shrikhand, cursive;
-  font-weight: bold;
-  font-size: 5em;
-  animation: bounce 1s linear infinite;
-  position: relative;
-  z-index: 1;
-}
-.loader__shadow {
-  width: 5em;
-  height: 2em;
-  background-color: #ccc;
-  border-radius: 50%;
-  box-shadow: 0 0 1em #aaaaaa;
-  animation: shadow 1s ease-in-out infinite;
-}
-
 .loading {
   display: none;
 }
-
-/*
-
-$radius: 5em;
-$gray: #e5e5e5;
-$dark-gray: darken($gray, 20%);
-
-$gray-gradient: linear-gradient(
-  350deg,
-  $gray 0%,
-  $dark-gray 85%
-);
 
 .spinner, .circle--small {
   display: flex;
@@ -267,7 +215,7 @@ $gray-gradient: linear-gradient(
   align-items: center;
 }
 
-.loading-spiner{
+.loading-spiner {
   margin: -0.75em;
 }
 
@@ -275,55 +223,52 @@ $gray-gradient: linear-gradient(
   position: relative;
 }
 
-.circle{
-  height:$radius;
-  width:$radius;
-  border-radius:100%;
-  background: $gray-gradient;
-
-  &--quarter{
-    height:$radius / 2;
-    width:$radius / 2;
-    border-top-right-radius:100%;
-    background: $purple-gradient;
-    position: absolute;
-    top: 0;
-    left: $radius / 2;
-    transform-origin: 0% 100%;
-    animation: rotate 2000ms cubic-bezier(0,1.09,1,1) 500ms infinite both;
-  }
-
-  &--small{
-    height:$radius - .75em;
-    width:$radius - .75em;
-    border-radius:100%;
-    background-color: #fff;
-    position: absolute;
-    font-family: "Shrikhand", cursive;
-    color: $color-primary;
-  }
+.circle {
+  height: 5em;
+  width: 5em;
+  border-radius: 100%;
+  background: linear-gradient(350deg, #e5e5e5 0%, #b2b2b2 85%);
+}
+.circle--quarter {
+  height: 2.5em;
+  width: 2.5em;
+  border-top-right-radius: 100%;
+  background: linear-gradient(350deg, #9356dc 0%, #ff79da 85%);
+  position: absolute;
+  top: 0;
+  left: 2.5em;
+  transform-origin: 0% 100%;
+  animation: rotate 2000ms cubic-bezier(0, 1.09, 1, 1) 500ms infinite both;
+}
+.circle--small {
+  height: 4.25em;
+  width: 4.25em;
+  border-radius: 100%;
+  background-color: #fff;
+  position: absolute;
+  font-family: "Shrikhand", cursive;
+  color: #9356dc;
 }
 
-@keyframes rotate{
-  0%{
+@keyframes rotate {
+  0% {
     transform: rotate(0);
     animation-timing-function: ease-in-out;
-    opacity:0.8;
+    opacity: 0.8;
   }
-  50%{
-    opacity:1;
+  50% {
+    opacity: 1;
   }
-  75%{
+  75% {
     transform: rotate(240deg);
     animation-timing-function: ease-in-out;
   }
-  100%{
+  100% {
     transform: rotate(360deg);
-    opacity:0.8;
+    opacity: 0.8;
     animation-timing-function: ease-in-out;
   }
 }
-*/
 .card {
   display: block;
   width: 100%;
