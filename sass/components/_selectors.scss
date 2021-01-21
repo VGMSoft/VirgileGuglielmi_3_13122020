@@ -9,7 +9,11 @@
   overflow: hidden;
   box-shadow: 5px 5px 5px darken($background-color, 5%);
   background-color: lighten($background-color, 5%);
-  
+  @for $i from 1 through 10 {
+            &--#{$i} {
+                animation-delay: 100ms * $i;
+             }
+        }
   &__info {
     flex: 1;
     display: flex;
