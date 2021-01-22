@@ -5,6 +5,11 @@ $color-tertiary: #99e2d0;
 $background-color: #f6f6f6;
 $color-white: #fff;
 
+$backgrounds: (
+  bgwhite: #fff,
+  bggray: darken($background-color, 1%)
+);
+
 $purple-gradient: linear-gradient(
   350deg,
   $color-primary 0%,

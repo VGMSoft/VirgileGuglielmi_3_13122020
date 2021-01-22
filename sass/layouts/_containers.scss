@@ -108,7 +108,7 @@
     justify-content: space-between;
     padding: 1.5em;
     border-radius: 2em 2em 0 0;
-    background-color: #f3f3f3;
+    @include gray-scale(1%);
     z-index: 2;
     margin-top: -3em;
     position: relative;
@@ -134,7 +134,7 @@
   }
   &__catego {
     margin-bottom: 2em;
-    @include delay(1);
+    @include delay;
     h2 {
       text-transform: uppercase;
       font-size: 1em;

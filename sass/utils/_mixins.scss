@@ -6,11 +6,13 @@
     rgba($color-secondary, $alpha) 85%
   );
 }
+
 @mixin gray-scale($lightness) {
   background-color: darken($background-color, $lightness);
 }
 
 //layout
+/* ? */
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -33,11 +35,21 @@
   overflow: hidden;
 }
 
+@mixin bg-choose {
+  @each $color, $value in $backgrounds {
+    &--#{$color} {
+      background-color: $value;
+    }
+  }
+}
+
 //animation
-@mixin delay($delay) {
-  @for $delay from 1 through 10 {
-    .delay#{$delay} {
-      animation: menu-appear 1s ease-in-out (#{$delay * $transition-delay});
+ 
+$transition-delay: 200ms;
+@mixin delay {
+  @for $i from 1 through 10 {
+    &.delay#{$i}{
+      animation: menu-appear 1s ease-in-out (#{$i * $transition-delay});
     }
   }
 }

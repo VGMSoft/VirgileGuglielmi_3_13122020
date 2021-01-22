@@ -1,14 +1,9 @@
 .like {
   &__icon {
-    transition-duration: 500ms;
     @include pseudo;
     mix-blend-mode: lighten;
-    &--white {
-      background-color: #fff;
-    }
-    &--gray {
-      background-color: $background-color;
-    }
+    @include bg-choose;
+    transition-duration: 500ms;
   }
   &::before {
     opacity: 0;

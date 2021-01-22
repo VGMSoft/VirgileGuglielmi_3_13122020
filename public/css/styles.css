@@ -160,6 +160,7 @@ button:-moz-focusring,
 }
 
 /*-------------------------- Own CSS --------------------------*/
+/* ? */
 * {
   box-sizing: border-box;
   font-family: "Roboto", "sans-serif";
@@ -532,7 +533,6 @@ button {
 }
 
 .like__icon {
-  transition-duration: 500ms;
   content: "";
   position: absolute;
   top: 0;
@@ -540,12 +540,13 @@ button {
   bottom: 0;
   left: 0;
   mix-blend-mode: lighten;
+  transition-duration: 500ms;
 }
-.like__icon--white {
+.like__icon--bgwhite {
   background-color: #fff;
 }
-.like__icon--gray {
-  background-color: #f6f6f6;
+.like__icon--bggray {
+  background-color: #f3f3f3;
 }
 .like::before {
   opacity: 0;
@@ -763,35 +764,35 @@ header .brand__arrow {
 .menu__catego {
   margin-bottom: 2em;
 }
-.menu__catego .delay1 {
-  animation: menu-appear 1s ease-in-out 100ms;
-}
-.menu__catego .delay2 {
+.menu__catego.delay1 {
   animation: menu-appear 1s ease-in-out 200ms;
 }
-.menu__catego .delay3 {
-  animation: menu-appear 1s ease-in-out 300ms;
-}
-.menu__catego .delay4 {
+.menu__catego.delay2 {
   animation: menu-appear 1s ease-in-out 400ms;
 }
-.menu__catego .delay5 {
-  animation: menu-appear 1s ease-in-out 500ms;
-}
-.menu__catego .delay6 {
+.menu__catego.delay3 {
   animation: menu-appear 1s ease-in-out 600ms;
 }
-.menu__catego .delay7 {
-  animation: menu-appear 1s ease-in-out 700ms;
-}
-.menu__catego .delay8 {
+.menu__catego.delay4 {
   animation: menu-appear 1s ease-in-out 800ms;
 }
-.menu__catego .delay9 {
-  animation: menu-appear 1s ease-in-out 900ms;
-}
-.menu__catego .delay10 {
+.menu__catego.delay5 {
   animation: menu-appear 1s ease-in-out 1000ms;
+}
+.menu__catego.delay6 {
+  animation: menu-appear 1s ease-in-out 1200ms;
+}
+.menu__catego.delay7 {
+  animation: menu-appear 1s ease-in-out 1400ms;
+}
+.menu__catego.delay8 {
+  animation: menu-appear 1s ease-in-out 1600ms;
+}
+.menu__catego.delay9 {
+  animation: menu-appear 1s ease-in-out 1800ms;
+}
+.menu__catego.delay10 {
+  animation: menu-appear 1s ease-in-out 2000ms;
 }
 .menu__catego h2 {
   text-transform: uppercase;
