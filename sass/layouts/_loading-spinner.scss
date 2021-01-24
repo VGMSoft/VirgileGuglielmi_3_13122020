@@ -1,77 +1,82 @@
-.loading{
-  display:none;
+.loading {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  opacity: 0.85;
+  z-index: 1000;
+  transform: translateY(-100%);
+  animation: vanish 5500ms linear;
+  @include flex-center;
 }
 
-$radius: 5em;
-$gray: #e5e5e5;
-$dark-gray: darken($gray, 20%);
-
-$gray-gradient: linear-gradient(
-  350deg,
-  $gray 0%,
-  $dark-gray 85%
-);
-
-.spinner, .circle--small {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.spinner,
+.spinner__mask {
+  @include flex-center;
+  z-index: 1500;
 }
 
-.loading-spiner{
-  margin: -0.75em;
+body {
+  height: 100vh;
+  margin: 0;
 }
 
 .spinner {
-  position: relative;
-}
-
-.circle{
-  height:$radius;
-  width:$radius;
-  border-radius:100%;
-  background: $gray-gradient;
-  
-  &--quarter{
-    height:$radius / 2;
-    width:$radius / 2;
-    border-top-right-radius:100%;
+  position: absolute;
+  height: $radius;
+  width: $radius;
+  filter: drop-shadow(0 0 0.5rem $dark-gray);
+  &__circle {
+    border-radius: 100%;
+    background: $gray-gradient;
+    overflow: hidden;
+    height: $radius;
+    width: $radius;
+  }
+  &__quarter {
+    height: $radius / 2;
+    width: $radius / 2;
+    border-top-right-radius: 100%;
     background: $purple-gradient;
     position: absolute;
     top: 0;
     left: $radius / 2;
     transform-origin: 0% 100%;
-    animation: rotate 2000ms cubic-bezier(0,1.09,1,1) 500ms infinite both;
+    animation: rotate 1.5s linear infinite;
   }
-  
-  &--small{
-    height:$radius - .75em;
-    width:$radius - .75em;
-    border-radius:100%;
+      
+  &__mask {
+    height: $radius - 3.9em;
+    width: $radius - 3.9em;
+    border-radius: 100%;
     background-color: #fff;
     position: absolute;
     font-family: "Shrikhand", cursive;
+    font-size: 25px;
     color: $color-primary;
+    overflow: hidden;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 100%;
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+  &:hover {
+    .spinner__quarter {
+      animation: rotate-inv 1.5s linear infinite;
+      transform: rotate(90deg);
+    }
   }
 }
-
-@keyframes rotate{
-  0%{
-    transform: rotate(0);
-    animation-timing-function: ease-in-out;
-    opacity:0.8;
-  }
-  50%{
-    opacity:1;
-  }
-  75%{
-    transform: rotate(240deg);
-    animation-timing-function: ease-in-out;
-  }
-  100%{
-    transform: rotate(360deg);
-    opacity:0.8;
-    animation-timing-function: ease-in-out;
-  }
-}
-

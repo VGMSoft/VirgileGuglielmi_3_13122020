@@ -161,6 +161,107 @@ button:-moz-focusring,
 
 /*-------------------------- Own CSS --------------------------*/
 /* ? */
+@keyframes vanish {
+  0% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.8;
+  }
+}
+@keyframes rotate-inv {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: ease-in-out;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-360deg);
+    opacity: 0.8;
+    animation-timing-function: ease-in-out;
+  }
+}
+@keyframes menu-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*@keyframes plate-appear {
+  0% {
+    transform: 0;
+    opacity: ;
+  }
+  10% {
+    transform: ;
+    opacity: ;
+  }
+  20% {
+    transform: ;
+    opacity: ;
+  }
+  30% {
+    transform: ;
+    opacity: ;
+  }
+  40% {
+    transform: ;
+    opacity: ;
+  }
+  45% {
+    transform: ;
+    opacity: ;
+  }
+  50% {
+    transform: ;
+    opacity: ;
+  }
+  55% {
+    transform: ;
+    opacity: ;
+  }
+  60% {
+    transform: ;
+    opacity: ;
+  }
+  70% {
+    transform: ;
+    opacity: ;
+  }
+  80% {
+    transform: ;
+    opacity: ;
+  }
+  90% {
+    transform: ;
+    opacity: ;
+  }
+  100% {
+    transform: ;
+    opacity: 1;
+  }
+}*/
 * {
   box-sizing: border-box;
   font-family: "Roboto", "sans-serif";
@@ -207,69 +308,87 @@ button {
 }
 
 .loading {
-  display: none;
-}
-
-.spinner, .circle--small {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  opacity: 0.85;
+  z-index: 1000;
+  transform: translateY(-100%);
+  animation: vanish 5500ms linear;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.loading-spiner {
-  margin: -0.75em;
+.spinner,
+.spinner__mask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
 }
 
 .spinner {
-  position: relative;
+  position: absolute;
+  height: 10em;
+  width: 10em;
+  filter: drop-shadow(0 0 0.5rem #b2b2b2);
 }
-
-.circle {
-  height: 5em;
-  width: 5em;
+.spinner__circle {
   border-radius: 100%;
   background: linear-gradient(350deg, #e5e5e5 0%, #b2b2b2 85%);
+  overflow: hidden;
+  height: 10em;
+  width: 10em;
 }
-.circle--quarter {
-  height: 2.5em;
-  width: 2.5em;
+.spinner__quarter {
+  height: 5em;
+  width: 5em;
   border-top-right-radius: 100%;
   background: linear-gradient(350deg, #9356dc 0%, #ff79da 85%);
   position: absolute;
   top: 0;
-  left: 2.5em;
+  left: 5em;
   transform-origin: 0% 100%;
-  animation: rotate 2000ms cubic-bezier(0, 1.09, 1, 1) 500ms infinite both;
+  animation: rotate 1.5s linear infinite;
 }
-.circle--small {
-  height: 4.25em;
-  width: 4.25em;
+.spinner__mask {
+  height: 6.1em;
+  width: 6.1em;
   border-radius: 100%;
   background-color: #fff;
   position: absolute;
   font-family: "Shrikhand", cursive;
+  font-size: 25px;
   color: #9356dc;
+  overflow: hidden;
+}
+.spinner__mask::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+  background-color: #9356dc;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.spinner__mask:hover::after {
+  opacity: 0.3;
+}
+.spinner:hover .spinner__quarter {
+  animation: rotate-inv 1.5s linear infinite;
+  transform: rotate(90deg);
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-    animation-timing-function: ease-in-out;
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    transform: rotate(240deg);
-    animation-timing-function: ease-in-out;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0.8;
-    animation-timing-function: ease-in-out;
-  }
-}
 .card {
   display: block;
   width: 100%;
