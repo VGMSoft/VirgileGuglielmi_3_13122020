@@ -61,7 +61,7 @@ $transition-delay: 200ms;
 }
 
 @mixin tablet-only {
-  @media screen and (min-device-width: map-get($breakpoints, tablet)) {
+  @media screen and (min-width: map-get($breakpoints, tablet)) {
     @content;
   }
 }

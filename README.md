@@ -70,7 +70,7 @@ https://github.com/VGMSoft/VirgileGuglielmi_3_13122020.git
 ```sh
 sass --watch ./sass/main.scss:./public/css/styles.css
 postcss --watch ./public/css/styles.css --use autoprefixer -d ./public/css/prefixed/
-
+build npm run sass & npm run prefix
 ```
 
 ## Author
