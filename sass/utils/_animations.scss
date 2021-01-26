@@ -42,69 +42,15 @@
 }
 
 //menu
-@keyframes menu-appear {
-  0% {
-    //transform: 0;
+@keyframes item-appear {
+  from {
+    transform: translateY(1em);
+    //margin-bottom: 3em;
     opacity: 0;
   }
-
-  100% {
-    //transform: 0;
+  to {
+    transform: translateY(0em);
+    //margin-bottom: 0.5em;
     opacity: 1;
   }
 }
-
-/*@keyframes plate-appear {
-  0% {
-    transform: 0;
-    opacity: ;
-  }
-  10% {
-    transform: ;
-    opacity: ;
-  }
-  20% {
-    transform: ;
-    opacity: ;
-  }
-  30% {
-    transform: ;
-    opacity: ;
-  }
-  40% {
-    transform: ;
-    opacity: ;
-  }
-  45% {
-    transform: ;
-    opacity: ;
-  }
-  50% {
-    transform: ;
-    opacity: ;
-  }
-  55% {
-    transform: ;
-    opacity: ;
-  }
-  60% {
-    transform: ;
-    opacity: ;
-  }
-  70% {
-    transform: ;
-    opacity: ;
-  }
-  80% {
-    transform: ;
-    opacity: ;
-  }
-  90% {
-    transform: ;
-    opacity: ;
-  }
-  100% {
-    transform: ;
-    opacity: 1;
-  }
-}*/

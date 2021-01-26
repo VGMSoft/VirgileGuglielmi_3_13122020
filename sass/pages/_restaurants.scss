@@ -43,7 +43,7 @@
   }
   &__catego {
     margin-bottom: 2em;
-    @include delay;
+    @include catego-delay(0.5);
     h2 {
       text-transform: uppercase;
       font-size: 1em;
@@ -61,7 +61,6 @@
   }
 }
 
-
 .plate {
   display: flex;
   flex-direction: row;
@@ -73,11 +72,7 @@
   overflow: hidden;
   box-shadow: 5px 5px 5px darken($background-color, 5%);
   background-color: lighten($background-color, 5%);
-  @for $i from 1 through 10 {
-            &--#{$i} {
-                animation-delay: 100ms * $i;
-             }
-        }
+  @include item-delay(0.25);
   &__info {
     flex: 1;
     display: flex;

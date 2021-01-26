@@ -6,7 +6,7 @@
   opacity: 0.85;
   z-index: 1000;
   transform: translateY(-100%);
-  animation: vanish 4500ms linear;
+  animation: vanish 4000ms linear;
   @include flex-center;
 }
 

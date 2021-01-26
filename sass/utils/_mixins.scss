@@ -44,11 +44,18 @@
 
 //animation
  
-$transition-delay: 200ms;
-@mixin delay {
-  @for $i from 1 through 10 {
-    &.delay#{$i}{
-      animation: menu-appear 1s ease-in-out (#{$i * $transition-delay});
+@mixin catego-delay($timing) {
+  @for $i from 1 to 4 {
+    &.delay--#{$i} {
+      animation: item-appear 2.5s ease-out (#{($timing * $i)}s) both;
+    }
+  }
+}
+
+@mixin item-delay($timing) {
+  @for $j from 1 to 11 {
+    &.delay--#{$j} {
+      animation: item-appear 2.5s ease-out (#{($timing * $j)}s) both;
     }
   }
 }
