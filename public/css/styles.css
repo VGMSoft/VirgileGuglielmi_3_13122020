@@ -545,46 +545,46 @@ body {
 }
 
 .delay--1 {
-  animation: item-appear 3s ease-out 0.2142857143s both;
+  animation: item-appear 1s ease-out 0.1428571429s both;
 }
 .delay--2 {
-  animation: item-appear 3s ease-out 0.4285714286s both;
+  animation: item-appear 1s ease-out 0.2857142857s both;
 }
 .delay--3 {
-  animation: item-appear 3s ease-out 0.6428571429s both;
+  animation: item-appear 1s ease-out 0.4285714286s both;
 }
 .delay--4 {
-  animation: item-appear 3s ease-out 0.8571428571s both;
+  animation: item-appear 1s ease-out 0.5714285714s both;
 }
 .delay--5 {
-  animation: item-appear 3s ease-out 1.0714285714s both;
+  animation: item-appear 1s ease-out 0.7142857143s both;
 }
 .delay--6 {
-  animation: item-appear 3s ease-out 1.2857142857s both;
+  animation: item-appear 1s ease-out 0.8571428571s both;
 }
 .delay--7 {
-  animation: item-appear 3s ease-out 1.5s both;
+  animation: item-appear 1s ease-out 1s both;
 }
 .delay--8 {
-  animation: item-appear 3s ease-out 1.7142857143s both;
+  animation: item-appear 1s ease-out 1.1428571429s both;
 }
 .delay--9 {
-  animation: item-appear 3s ease-out 1.9285714286s both;
+  animation: item-appear 1s ease-out 1.2857142857s both;
 }
 .delay--10 {
-  animation: item-appear 3s ease-out 2.1428571429s both;
+  animation: item-appear 1s ease-out 1.4285714286s both;
 }
 .delay--11 {
-  animation: item-appear 3s ease-out 2.3571428571s both;
+  animation: item-appear 1s ease-out 1.5714285714s both;
 }
 .delay--12 {
-  animation: item-appear 3s ease-out 2.5714285714s both;
+  animation: item-appear 1s ease-out 1.7142857143s both;
 }
 .delay--13 {
-  animation: item-appear 3s ease-out 2.7857142857s both;
+  animation: item-appear 1s ease-out 1.8571428571s both;
 }
 .delay--14 {
-  animation: item-appear 3s ease-out 3s both;
+  animation: item-appear 1s ease-out 2s both;
 }
 
 .like__icon {

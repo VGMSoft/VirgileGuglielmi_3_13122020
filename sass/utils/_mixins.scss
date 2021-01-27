@@ -47,7 +47,7 @@
 @mixin appear-delay($items, $duration){
   @for $i from 1 to ($items + 1) {
     &--#{$i}{
-      animation: item-appear $duration ease-out (($duration / $items) * $i) both;
+      animation: item-appear $duration ease-out (($duration / ($items / 2)) * $i) both;
     }
   }
 }
