@@ -53,7 +53,7 @@ button {
   opacity: 0.85;
   z-index: 1000;
   transform: translateY(-100%);
-  animation: vanish 4000ms linear;
+  animation: vanish 3s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -671,7 +671,7 @@ header .brand__arrow {
   0% {
     transform: translateY(0%);
   }
-  93% {
+  99% {
     transform: translateY(0%);
   }
   100% {
