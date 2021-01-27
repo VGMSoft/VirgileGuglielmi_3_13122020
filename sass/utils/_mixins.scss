@@ -43,22 +43,16 @@
 }
 
 //animation
- 
-@mixin catego-delay($timing) {
-  @for $i from 1 to 4 {
-    &.delay--#{$i} {
-      animation: item-appear 2.5s ease-out (#{($timing * $i)}s) both;
+
+@mixin appear-delay($items, $duration){
+  @for $i from 1 to ($items + 1) {
+    &--#{$i}{
+      animation: item-appear $duration ease-out (($duration / $items) * $i) both;
     }
   }
 }
 
-@mixin item-delay($timing) {
-  @for $j from 1 to 11 {
-    &.delay--#{$j} {
-      animation: item-appear 2.5s ease-out (#{($timing * $j)}s) both;
-    }
-  }
-}
+
 
 //responsive
 @mixin mobile-only {

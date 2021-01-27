@@ -45,12 +45,12 @@
 @keyframes item-appear {
   from {
     transform: translateY(1em);
-    //margin-bottom: 3em;
+    margin-bottom: 3em;
     opacity: 0;
   }
   to {
     transform: translateY(0em);
-    //margin-bottom: 0.5em;
+    //margin-bottom: 1em;
     opacity: 1;
   }
 }

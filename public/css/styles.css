@@ -410,6 +410,17 @@ body {
   background-color: #f3f3f3;
   z-index: 2;
   position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 1280px) {
+  .resto {
+    height: 28em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .resto {
+    height: 34em;
+  }
 }
 .resto__pic {
   object-fit: cover;
@@ -451,18 +462,6 @@ body {
     padding: 1em 15%;
   }
 }
-.menu__catego {
-  margin-bottom: 2em;
-}
-.menu__catego.delay--1 {
-  animation: item-appear 2.5s ease-out 0.5s both;
-}
-.menu__catego.delay--2 {
-  animation: item-appear 2.5s ease-out 1s both;
-}
-.menu__catego.delay--3 {
-  animation: item-appear 2.5s ease-out 1.5s both;
-}
 .menu__catego h2 {
   text-transform: uppercase;
   font-size: 1em;
@@ -488,36 +487,6 @@ body {
   overflow: hidden;
   box-shadow: 5px 5px 5px #e9e9e9;
   background-color: white;
-}
-.plate.delay--1 {
-  animation: item-appear 2.5s ease-out 0.25s both;
-}
-.plate.delay--2 {
-  animation: item-appear 2.5s ease-out 0.5s both;
-}
-.plate.delay--3 {
-  animation: item-appear 2.5s ease-out 0.75s both;
-}
-.plate.delay--4 {
-  animation: item-appear 2.5s ease-out 1s both;
-}
-.plate.delay--5 {
-  animation: item-appear 2.5s ease-out 1.25s both;
-}
-.plate.delay--6 {
-  animation: item-appear 2.5s ease-out 1.5s both;
-}
-.plate.delay--7 {
-  animation: item-appear 2.5s ease-out 1.75s both;
-}
-.plate.delay--8 {
-  animation: item-appear 2.5s ease-out 2s both;
-}
-.plate.delay--9 {
-  animation: item-appear 2.5s ease-out 2.25s both;
-}
-.plate.delay--10 {
-  animation: item-appear 2.5s ease-out 2.5s both;
 }
 .plate__info {
   flex: 1;
@@ -573,6 +542,49 @@ body {
 }
 .plate:hover > .plate__check > i {
   transform: rotate(0deg);
+}
+
+.delay--1 {
+  animation: item-appear 3s ease-out 0.2142857143s both;
+}
+.delay--2 {
+  animation: item-appear 3s ease-out 0.4285714286s both;
+}
+.delay--3 {
+  animation: item-appear 3s ease-out 0.6428571429s both;
+}
+.delay--4 {
+  animation: item-appear 3s ease-out 0.8571428571s both;
+}
+.delay--5 {
+  animation: item-appear 3s ease-out 1.0714285714s both;
+}
+.delay--6 {
+  animation: item-appear 3s ease-out 1.2857142857s both;
+}
+.delay--7 {
+  animation: item-appear 3s ease-out 1.5s both;
+}
+.delay--8 {
+  animation: item-appear 3s ease-out 1.7142857143s both;
+}
+.delay--9 {
+  animation: item-appear 3s ease-out 1.9285714286s both;
+}
+.delay--10 {
+  animation: item-appear 3s ease-out 2.1428571429s both;
+}
+.delay--11 {
+  animation: item-appear 3s ease-out 2.3571428571s both;
+}
+.delay--12 {
+  animation: item-appear 3s ease-out 2.5714285714s both;
+}
+.delay--13 {
+  animation: item-appear 3s ease-out 2.7857142857s both;
+}
+.delay--14 {
+  animation: item-appear 3s ease-out 3s both;
 }
 
 .like__icon {
@@ -697,6 +709,7 @@ header .brand__arrow {
 @keyframes item-appear {
   from {
     transform: translateY(1em);
+    margin-bottom: 3em;
     opacity: 0;
   }
   to {
