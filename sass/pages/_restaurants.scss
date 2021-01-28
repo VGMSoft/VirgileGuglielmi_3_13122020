@@ -40,7 +40,6 @@
 }
 
 .menu {
-  
   @include desktop-only {
     display: grid;
     grid-template: 1fr / repeat(3, 30.75%);
@@ -99,11 +98,13 @@
     align-items: flex-end;
     font-weight: 500;
     margin-left: 1em;
+    //transform: translateX(5em);
   }
   &__check {
     margin-top: -1em;
-    margin-right: -5em;
     margin-left: 1em;
+    margin-right: -5em;
+    //transform: translateX(5em);
     @include flex-center;
     border-radius: 0 1.25em 1.25em 0;
     background-color: $color-tertiary;
@@ -122,6 +123,7 @@
   &:hover {
     & > .plate__check {
       margin-right: -1em;
+      //transform: translateX(1em);
     }
     & > .plate__check > i {
       transform: rotate(0deg);
@@ -129,6 +131,6 @@
   }
 }
 
-.delay{
+.delay {
   @include appear-delay(14, 1s);
 }
