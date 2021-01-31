@@ -78,9 +78,11 @@
   padding-bottom: 2em;
   @include desktop-only {
     padding: 2em 15%;
+    padding-bottom: 3em;
   }
   @include widescreen-only {
     padding: 1em 17.5%;
+    padding-bottom: 3em;
   }
   h2 {
     margin-top: 1.5em;
