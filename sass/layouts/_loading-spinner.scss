@@ -16,11 +16,6 @@
   z-index: 1500;
 }
 
-body {
-  height: 100vh;
-  margin: 0;
-}
-
 .spinner {
   position: absolute;
   height: $radius;
@@ -44,7 +39,7 @@ body {
     transform-origin: 0% 100%;
     animation: rotate 1.5s linear infinite;
   }
-      
+
   &__mask {
     height: $radius - 3.9em;
     width: $radius - 3.9em;

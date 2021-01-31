@@ -66,11 +66,6 @@ button {
   z-index: 1500;
 }
 
-body {
-  height: 100vh;
-  margin: 0;
-}
-
 .spinner {
   position: absolute;
   height: 10em;
@@ -646,6 +641,7 @@ header .brand__arrow {
   background-color: #444444;
   color: #fff;
   padding: 1em;
+  margin-bottom: 0;
 }
 .footer__logo {
   font-family: "Shrikhand", cursive;
