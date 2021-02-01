@@ -1,3 +1,6 @@
+.fa-stack{
+  background: #000;
+}
 .like {
   &__icon {
     @include pseudo;
@@ -15,8 +18,9 @@
     &::before {
       opacity: 1;
     }
-    .like--light {
+    .like__icon--light {
       opacity: 0;
     }
   }
 }
+

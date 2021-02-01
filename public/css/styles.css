@@ -583,6 +583,10 @@ button {
   animation: item-appear 1s ease-out 2s both;
 }
 
+.fa-stack {
+  background: #000;
+}
+
 .like__icon {
   content: "";
   position: absolute;
@@ -613,7 +617,7 @@ button {
 .like:hover::before {
   opacity: 1;
 }
-.like:hover .like--light {
+.like:hover .like__icon--light {
   opacity: 0;
 }
 
