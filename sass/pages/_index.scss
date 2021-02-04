@@ -59,9 +59,9 @@
 .function {
   background-color: #fff;
   padding: 2em 1em;
-  @include desktop-only {
+  /*@include desktop-only {
     padding: 2em 15%;
-  }
+  }*/
   @include widescreen-only {
     min-width: 70%;
     padding: 2em 17.5%;
