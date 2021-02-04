@@ -72,24 +72,6 @@
   }
 }
 
-.restos {
-  background-color: $background-color;
-  position: relative;
-  padding-bottom: 2em;
-  @include desktop-only {
-    padding: 2em 15%;
-    padding-bottom: 3em;
-  }
-  @include widescreen-only {
-    padding: 1em 17.5%;
-    padding-bottom: 3em;
-  }
-  h2 {
-    margin-top: 1.5em;
-    margin-bottom: 1em;
-  }
-}
-
 .steps {
   counter-reset: compteListe;
   @include desktop-only {
@@ -111,7 +93,7 @@
   font-weight: 500;
   background-color: $background-color;
   @include desktop-only {
-    width: 30%;
+    min-width: 30%;
   }
   transition: opacity 750ms ease-in-out;
   i::before {
@@ -150,3 +132,23 @@
     }
   }
 }
+
+
+.restos {
+  background-color: $background-color;
+  position: relative;
+  padding-bottom: 2em;
+  @include desktop-only {
+    padding: 2em 15%;
+    padding-bottom: 3em;
+  }
+  @include widescreen-only {
+    padding: 1em 17.5%;
+    padding-bottom: 3em;
+  }
+  h2 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+}
+

@@ -40,10 +40,6 @@ button {
   border: none;
 }
 
-.fa-stack {
-  background: #000;
-}
-
 .loading {
   position: fixed;
   height: 100vh;
@@ -360,7 +356,7 @@ button {
 }
 @media screen and (min-width: 1280px) {
   .step {
-    width: 30%;
+    min-width: 30%;
   }
 }
 .step i::before {
