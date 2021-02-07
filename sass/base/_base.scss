@@ -1,18 +1,27 @@
+
 * {
   box-sizing: border-box;
   font-family: "Roboto", "sans-serif";
 }
-/*body{
-  @include widescreen-only {
-    height: 50vh;
-  }
-}*/
+// test scroll
+html,
+body {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-body,
+::-webkit-scrollbar {
+  display: none;
+}
+
+// test scroll end
+
 .reserv,
 .function,
 .restos {
-  width: 100vw;
+  max-width: 100%;
   margin: 0;
 }
 
@@ -37,4 +46,3 @@ p {
 button {
   border: none;
 }
-
